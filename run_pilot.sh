@@ -63,7 +63,15 @@ step_build() {
   python g0_pilot.py build --tasks agent_tasks/re2-ob --dev dev_cases.json 2>&1 | tee "$LOG/build.log"
 }
 
+need_tasks() {
+  if [ ! -f pilot_tasks/pilot/manifest.json ]; then
+    echo "No pilot cases yet. Run these first: ./run_pilot.sh export && ./run_pilot.sh select && ./run_pilot.sh build" >&2
+    exit 1
+  fi
+}
+
 run_agent() {  # $1 = predictions file, rest = extra args
+  need_tasks
   need_key
   local out="$1"; shift
   local rc=0
@@ -94,6 +102,7 @@ step_status() {
 }
 
 step_smoke() {
+  need_tasks
   local ids
   ids=$(python -c "import json;print(' '.join(json.load(open('pilot_tasks/pilot/manifest.json'))['case_ids'][:4]))")
   run_agent smoke_preds.jsonl --cases $ids
