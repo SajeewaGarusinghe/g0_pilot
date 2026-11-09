@@ -1,0 +1,12 @@
+.env
+.venv/
+agent_tasks/
+data/
+pilot_tasks/
+pilot_sealed/
+selftest/
+logs/
+*.jsonl
+*.trajectories/
+dev_cases.json
+__pycache__/
