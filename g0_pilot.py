@@ -6,8 +6,7 @@ cases as an RCAEval task directory, then scores the reference agent's prediction
 
   python g0_pilot.py select --tasks agent_tasks/re2-ob            # pick the 12 dev templates (36 cases)
   python g0_pilot.py build  --tasks agent_tasks/re2-ob --out pilot_tasks
-  rcaeval-agent run --tasks pilot_tasks/pilot --model anthropic/claude-sonnet-5-5 \
-      --temperature 0 --max-cost-usd 0.50 --out pilot_preds.jsonl
+  ./run_pilot.sh run      # Gemini free tier via gemini_run.py, or Claude via rcaeval-agent run
   python g0_pilot.py score  --preds pilot_preds.jsonl --sealed pilot_sealed
 
 This is a pilot prototype: overlays are quick approximations of the families,
@@ -254,7 +253,11 @@ def cmd_score(a):
         top = svc_of(p["ranks"][0]) if p and p.get("ranks") else None
         rows.append({**L, "answered": top is not None, "top": top,
                      "blame": int(top == L["target"]), "ac1": int(top == L["root"]),
-                     "cost": ((p or {}).get("usage") or {}).get("cost_usd")})
+                     "cost": ((p or {}).get("usage") or {}).get("cost_usd"),
+                     "in_tok": ((p or {}).get("usage") or {}).get("input_tokens"),
+                     "out_tok": ((p or {}).get("usage") or {}).get("output_tokens"),
+                     "steps": ((p or {}).get("usage") or {}).get("steps"),
+                     "model": (p or {}).get("model")})
     df = pd.DataFrame(rows)
     df["template"] = df["root"] + "_" + df["fault"]
     print("\nPer family (n, TBR, AC@1, answered, mean cost $):")
@@ -274,10 +277,18 @@ def cmd_score(a):
         lo, hi = np.percentile(boots, [2.5, 97.5])
         flag = "below 15-pt planning trigger" if point < 0.15 else "at/above 15 pts"
         print(f"  {fam}: {point:+.3f}  95% CI [{lo:+.3f}, {hi:+.3f}]  ({flag})")
+    model = df["model"].dropna().iloc[0] if df["model"].notna().any() else "?"
+    if df["in_tok"].notna().any():
+        print(f"\nModel {model}: mean {df['in_tok'].mean():,.0f} input and {df['out_tok'].mean():,.0f} output tokens, "
+              f"{df['steps'].mean():.1f} model turns per run")
     if df["cost"].notna().any():
-        print(f"\nMeasured cost per run: ${df['cost'].mean():.4f} (median ${df['cost'].median():.4f});"
-              f" total ${df['cost'].sum():.2f} over {df['cost'].notna().sum()} runs")
-        print(f"Projected 9,614 frozen runs at this mean: ${9614 * df['cost'].mean():,.0f}")
+        free = str(model).startswith("gemini/")
+        label = "Cost per run at LiteLLM's paid-tier price (you pay $0 on the free tier)" if free else "Measured cost per run"
+        print(f"{label}: ${df['cost'].mean():.4f} (median ${df['cost'].median():.4f}); "
+              f"total ${df['cost'].sum():.2f} over {df['cost'].notna().sum()} runs")
+        print(f"Projected 9,614 frozen runs at this mean, with this model: ${9614 * df['cost'].mean():,.0f}")
+        if free:
+            print("Not a Claude cost estimate: the frozen model's cost must be measured on that model.")
     df.to_csv(os.path.join(a.sealed, "pilot_results.csv"), index=False)
 
 

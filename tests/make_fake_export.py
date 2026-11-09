@@ -25,7 +25,7 @@ for s in svcs:
       lg=[dict(time=t,timestamp=t*1_000_000_000,container_name=c,message=f"request served {t}",level="info") for t in range(inj-600,inj+600,7) for c in ["cartservice","frontend","productcatalogservice"]]
       pd.DataFrame(lg).to_csv(d+"/logs.csv",index=False)
       pd.DataFrame({"time":range(inj-600,inj+600),**{x+"_cpu":0.1 for x in svcs}}).to_csv(d+"/metrics.csv",index=False)
-      json.dump({"schema_version":1,"case_id":cid,"dataset":"re2-ob","system":"Online Boutique","inject_time":inj,"standard_window":{},"files":{"metrics":"metrics.csv","logs":"logs.csv","traces":"traces.csv"},"candidate_services":svcs+["frontend"],"candidate_indicators":[],"answer_format":""},open(d+"/task.json","w"))
+      json.dump({"schema_version":1,"case_id":cid,"dataset":"re2-ob","system":"Online Boutique","inject_time":inj,"standard_window":{"start":inj-600,"end":inj+600},"files":{"metrics":"metrics.csv","logs":"logs.csv","traces":"traces.csv"},"candidate_services":svcs+["frontend"],"candidate_indicators":[x+"_cpu" for x in svcs],"answer_format":""},open(d+"/task.json","w"))
       ids.append(cid);ans.append(dict(case_id=cid,dataset="re2-ob",source=f"{s}_{f}/{r+1}",service=s,fault=f,indicator=s+"_cpu",answer_in_candidates=True,indicator_in_candidates=False,n_candidate_services=len(svcs)+1,n_candidate_indicators=0))
 json.dump({"case_ids":ids},open(root+"/manifest.json","w"))
 open(root+".answers.jsonl","w").write("".join(json.dumps(a)+"\n" for a in ans))
