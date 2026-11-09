@@ -28,6 +28,12 @@ GEMINI_RPM="${GEMINI_RPM:-12}"
 if [[ "$MODEL" == gemini/* ]]; then WORKERS="${WORKERS:-1}"; else WORKERS="${WORKERS:-2}"; fi
 LOG=logs; mkdir -p "$LOG"
 
+check_env() {
+  if ! python -c "import RCAEval, pandas" 2>/dev/null; then
+    echo "Python packages are missing (no .venv here, or setup did not finish). Run ./setup.sh first." >&2; exit 1
+  fi
+}
+
 need_key() {
   if [[ "$MODEL" == anthropic/* ]] && [ -z "${ANTHROPIC_API_KEY:-}" ]; then
     echo "ANTHROPIC_API_KEY is not set. Put it in .env (see .env.example)." >&2; exit 1
@@ -56,10 +62,14 @@ step_export() {
   rcaeval-agent export --dataset re2-ob --out agent_tasks 2>&1 | tee "$LOG/export.log"
 }
 
-step_select() { python g0_pilot.py select --tasks agent_tasks/re2-ob --out dev_cases.json | tee "$LOG/select.log"; }
+step_select() {
+  [ -d agent_tasks/re2-ob ] || { echo "Run ./run_pilot.sh export first." >&2; exit 1; }
+  python g0_pilot.py select --tasks agent_tasks/re2-ob --out dev_cases.json | tee "$LOG/select.log"
+}
 
 step_build() {
   if [ -d pilot_tasks/pilot ]; then echo "pilot_tasks/pilot exists; delete it to rebuild"; return; fi
+  [ -f dev_cases.json ] || { echo "Run ./run_pilot.sh select first." >&2; exit 1; }
   python g0_pilot.py build --tasks agent_tasks/re2-ob --dev dev_cases.json 2>&1 | tee "$LOG/build.log"
 }
 
@@ -116,6 +126,11 @@ step_score() {
   python g0_pilot.py score --preds pilot_preds.jsonl | tee "$LOG/score.log"
   rcaeval-agent evaluate --tasks pilot_tasks/pilot --predictions pilot_preds.jsonl | tee -a "$LOG/score.log"
 }
+
+case "${1:-}" in
+  ""|-h|--help) ;;
+  *) check_env ;;
+esac
 
 case "${1:-}" in
   selftest|export|select|build|smoke|run|score) "step_$1" ;;
