@@ -1,0 +1,264 @@
+model gemini/gemini-3.5-flash-lite, temperature 0, max steps 30, workers 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.turn_on_debug()'.
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.turn_on_debug()'.
+
+Traceback (most recent call last):
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 3392, in post
+    response: Final = client.post(
+                      ^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/llms/custom_httpx/http_handler.py", line 1567, in post
+    _raise_masked_sync_error(e, stream)
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/llms/custom_httpx/http_handler.py", line 546, in _raise_masked_sync_error
+    raise MaskedHTTPStatusError(e, message=_text, text=_text) from None
+litellm.llms.custom_httpx.http_handler.MaskedHTTPStatusError: Client error '403 Forbidden' for url 'https://generativelanguage.googleapis.com/v1alpha/models/gemini-3.5-flash-lite:generateContent'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/main.py", line 6155, in completion
+    response = _complete_vertex_ai_beta(_dispatch_ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/main.py", line 3686, in _complete_vertex_ai_beta
+    return vertex_chat_completion.completion(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 3410, in completion
+    first_response: Final = post(data)
+                            ^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 3397, in post
+    raise VertexAIError(
+litellm.llms.vertex_ai.common_utils.VertexAIError: {
+  "error": {
+    "code": 403,
+    "message": "The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting#project-unavailable.",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/opc/g0_pilot/gemini_run.py", line 103, in <module>
+    main()
+  File "/home/opc/g0_pilot/gemini_run.py", line 93, in main
+    run_tasks(a.tasks, a.model, a.out, cases=a.cases or None, workers=a.workers,
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/RCAEval/agent/react.py", line 151, in run_tasks
+    return run_batch(tasks_dir, out, solve, cases=cases, trajectories=trajectories, workers=workers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/RCAEval/agent/batch.py", line 63, in run_batch
+    list(pool.map(one, todo))
+  File "/home/opc/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/opc/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/RCAEval/agent/batch.py", line 48, in one
+    prediction, records = solve(case_id, join(tasks_dir, "cases", case_id))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/RCAEval/agent/react.py", line 149, in solve
+    return run_case(case_dir, model, completion=completion, **case_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/RCAEval/agent/react.py", line 80, in run_case
+    response = completion(**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/gemini_run.py", line 52, in call
+    return base(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/chat_completions/dispatch.py", line 91, in completion
+    return _DISPATCH.run(
+           ^^^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/rust_bridge/dispatch.py", line 81, in run
+    return python(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/utils.py", line 2039, in wrapper
+    raise e
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1890, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/main.py", line 6236, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2800, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2611, in exception_type
+    _map_vertex_exception(
+  File "/home/opc/g0_pilot/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 1256, in _map_vertex_exception
+    raise BadRequestError(
+litellm.exceptions.BadRequestError: litellm.BadRequestError: GeminiException BadRequestError - {
+  "error": {
+    "code": 403,
+    "message": "The Gemini API free tier is not available for this project. To use the Gemini API, please set up billing to upgrade to the paid tier at https://aistudio.google.com/billing. For more information, see https://ai.google.dev/gemini-api/docs/troubleshooting#project-unavailable.",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+model gemini/gemini-3.5-flash-lite, temperature 0, max steps 30, workers 1
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm.turn_on_debug()'.
+
+pilot-5c01ff0899: submit, 22 tool calls, $0.021, top 3 ['currencyservice_mem', 'currencyservice_cpu', 'currencyservice_latency']
+pilot-ee0fa6c913: submit, 20 tool calls, $0.018, top 3 ['recommendationservice', 'recommendationservice_latency', 'frontend_latency']
+pilot-d925833eb1: submit, 31 tool calls, $0.016, top 3 ['recommendationservice', 'frontend', 'checkoutservice']
+pilot-b65a88841f: submit, 31 tool calls, $0.016, top 3 ['checkoutservice', 'cartservice', 'recommendationservice']
+model gemini/gemini-3.5-flash-lite, temperature 0, max steps 30, workers 4
+pilot-d925833eb1: submit, 21 tool calls, $0.011, top 3 ['checkoutservice', 'checkoutservice_cpu', 'redis']
+pilot-b65a88841f: submit, 12 tool calls, $0.010, top 3 ['recommendationservice', 'recommendationservice_latency', 'frontend']
+pilot-ee0fa6c913: submit, 13 tool calls, $0.013, top 3 ['recommendationservice', 'recommendationservice_latency', 'frontend']
+pilot-89167699b7: submit, 19 tool calls, $0.006, top 3 ['checkoutservice', 'checkoutservice_mem', 'checkoutservice_cpu']
+pilot-539ff8f168: submit, 14 tool calls, $0.005, top 3 ['checkoutservice_latency', 'checkoutservice', 'shippingservice_latency']
+pilot-5c01ff0899: submit, 18 tool calls, $0.018, top 3 ['currencyservice', 'currencyservice_mem', 'currencyservice_cpu']
+pilot-8b88e0b66b: submit, 12 tool calls, $0.004, top 3 ['currencyservice_mem', 'currencyservice', 'currencyservice_cpu']
+pilot-3171ac02b0: submit, 15 tool calls, $0.017, top 3 ['checkoutservice', 'checkoutservice_mem', 'checkoutservice_cpu']
+pilot-c8ab42553e: submit, 23 tool calls, $0.024, top 3 ['recommendationservice', 'redis', 'cartservice']
+pilot-829c176a55: submit, 15 tool calls, $0.015, top 3 ['currencyservice', 'currencyservice_diskio', 'currencyservice_mem']
+pilot-5586b77d83: submit, 16 tool calls, $0.007, top 3 ['currencyservice', 'currencyservice_latency', 'currencyservice_mem']
+pilot-cfc52a621d: submit, 21 tool calls, $0.022, top 3 ['recommendationservice', 'frontend', 'checkoutservice']
+pilot-4ffb39f65b: submit, 20 tool calls, $0.007, top 3 ['emailservice', 'checkoutservice', 'redis']
+pilot-7ba0da3ef3: submit, 12 tool calls, $0.005, top 3 ['checkoutservice', 'checkoutservice_cpu', 'redis']
+pilot-f156bb42c1: submit, 17 tool calls, $0.006, top 3 ['currencyservice_mem', 'currencyservice', 'redis']
+pilot-de5d2060c7: submit, 15 tool calls, $0.014, top 3 ['currencyservice', 'currencyservice_latency', 'currencyservice_cpu']
+pilot-fd5dccda8b: submit, 17 tool calls, $0.017, top 3 ['currencyservice', 'currencyservice_cpu', 'checkoutservice']
+pilot-57d4336ad7: submit, 11 tool calls, $0.004, top 3 ['checkoutservice', 'checkoutservice_mem', 'checkoutservice_cpu']
+pilot-e15b7f867b: submit, 23 tool calls, $0.009, top 3 ['shippingservice', 'shippingservice_latency', 'emailservice']
+pilot-5fda618b4a: submit, 12 tool calls, $0.004, top 3 ['checkoutservice_mem', 'checkoutservice_cpu', 'checkoutservice']
+pilot-4c512a82da: submit, 18 tool calls, $0.007, top 3 ['currencyservice_latency', 'currencyservice', 'frontend_latency']
+pilot-a250608340: submit, 15 tool calls, $0.006, top 3 ['checkoutservice_mem', 'checkoutservice_cpu', 'checkoutservice']
+pilot-5583d950a9: submit, 22 tool calls, $0.023, top 3 ['shippingservice', 'shippingservice_latency', 'checkoutservice']
+pilot-0ba9b075c0: submit, 14 tool calls, $0.005, top 3 ['currencyservice', 'currencyservice_latency', 'currencyservice_cpu']
+pilot-b9b4c14f46: submit, 17 tool calls, $0.017, top 3 ['cartservice', 'cartservice_latency', 'redis']
+pilot-fae409198a: submit, 23 tool calls, $0.009, top 3 ['cartservice', 'redis', 'checkoutservice_latency']
+pilot-654ff5b3c3: submit, 13 tool calls, $0.004, top 3 ['currencyservice', 'currencyservice_latency', 'frontend']
+pilot-999c56409f: submit, 16 tool calls, $0.016, top 3 ['checkoutservice', 'checkoutservice_cpu', 'checkoutservice_mem']
+pilot-80d115800c: submit, 20 tool calls, $0.008, top 3 ['cartservice', 'checkoutservice_latency', 'checkoutservice']
+pilot-0310663973: submit, 22 tool calls, $0.012, top 3 ['checkoutservice', 'checkoutservice_latency', 'redis']
+pilot-32e6f6887e: submit, 15 tool calls, $0.006, top 3 ['emailservice', 'emailservice_latency', 'checkoutservice']
+pilot-d472d9cd55: submit, 18 tool calls, $0.008, top 3 ['redis_diskio', 'cartservice_latency', 'checkoutservice_latency']
+pilot-f384dc6dc1: submit, 22 tool calls, $0.012, top 3 ['shippingservice', 'emailservice', 'redis']
+pilot-ea5aca254d: submit, 12 tool calls, $0.012, top 3 ['checkoutservice', 'checkoutservice_cpu', 'checkoutservice_mem']
+pilot-0224585c58: submit, 17 tool calls, $0.007, top 3 ['checkoutservice_cpu', 'checkoutservice', 'checkoutservice_mem']
+pilot-367efa0a26: submit, 11 tool calls, $0.010, top 3 ['cartservice', 'frontend', 'recommendationservice']
+pilot-d6c45122dc: submit, 23 tool calls, $0.024, top 3 ['checkoutservice', 'checkoutservice_latency', 'frontend']
+pilot-4d7dce4db4: submit, 18 tool calls, $0.007, top 3 ['checkoutservice', 'checkoutservice_cpu', 'checkoutservice_latency']
+pilot-81dee005b2: submit, 24 tool calls, $0.010, top 3 ['redis', 'redis_diskio', 'checkoutservice']
+pilot-deb0ac7159: submit, 24 tool calls, $0.024, top 3 ['emailservice', 'cartservice', 'redis']
+pilot-e7f52e67a4: submit, 29 tool calls, $0.014, top 3 ['checkoutservice', 'frontend', 'currencyservice']
+pilot-1fe6b7f498: submit, 27 tool calls, $0.027, top 3 ['recommendationservice', 'cartservice', 'redis']
+pilot-5d125279fe: submit, 20 tool calls, $0.008, top 3 ['checkoutservice_mem', 'checkoutservice_cpu', 'checkoutservice']
+pilot-40e6d92986: submit, 14 tool calls, $0.005, top 3 ['currencyservice_mem', 'currencyservice', 'currencyservice_latency']
+pilot-ce886eb752: submit, 12 tool calls, $0.005, top 3 ['checkoutservice', 'checkoutservice_cpu', 'redis']
+pilot-2760d98b18: submit, 16 tool calls, $0.006, top 3 ['cartservice', 'redis', 'checkoutservice']
+pilot-552fbbec51: submit, 17 tool calls, $0.009, top 3 ['shippingservice', 'shippingservice_latency', 'checkoutservice']
+pilot-c9217b655f: submit, 21 tool calls, $0.022, top 3 ['cartservice', 'redis', 'checkoutservice']
+pilot-98c2f51532: submit, 24 tool calls, $0.011, top 3 ['currencyservice', 'currencyservice_mem', 'recommendationservice']
+pilot-31613d53fc: submit, 16 tool calls, $0.016, top 3 ['checkoutservice_cpu', 'checkoutservice', 'checkoutservice_latency']
+pilot-be81959778: submit, 11 tool calls, $0.010, top 3 ['checkoutservice', 'checkoutservice_cpu', 'checkoutservice_mem']
+pilot-01ad849e08: submit, 17 tool calls, $0.007, top 3 ['currencyservice', 'currencyservice_mem', 'currencyservice_latency']
+pilot-5ed3c4d2bc: submit, 15 tool calls, $0.015, top 3 ['checkoutservice', 'checkoutservice_cpu', 'checkoutservice_mem']
+pilot-5b19c74b0e: submit, 15 tool calls, $0.006, top 3 ['currencyservice', 'currencyservice_mem', 'frontend']
+pilot-5fa82a218f: submit, 26 tool calls, $0.026, top 3 ['currencyservice', 'currencyservice_cpu', 'currencyservice_latency']
+pilot-0618c29897: submit, 21 tool calls, $0.019, top 3 ['redis', 'redis_diskio', 'cartservice']
+pilot-c9397c9ba0: submit, 19 tool calls, $0.006, top 3 ['currencyservice', 'currencyservice_latency', 'checkoutservice']
+pilot-dff1432972: submit, 19 tool calls, $0.018, top 3 ['currencyservice', 'currencyservice_mem', 'currencyservice_cpu']
+pilot-dc1a6ed8e0: submit, 27 tool calls, $0.012, top 3 ['currencyservice', 'currencyservice_cpu', 'currencyservice_latency']
+pilot-d995eb5219: submit, 24 tool calls, $0.026, top 3 ['checkoutservice_cpu', 'checkoutservice', 'checkoutservice_mem']
+pilot-0ba1819070: submit, 24 tool calls, $0.010, top 3 ['checkoutservice', 'redis_diskio', 'emailservice']
+pilot-874d5f7bdb: submit, 29 tool calls, $0.012, top 3 ['shippingservice_latency', 'emailservice_latency', 'shippingservice']
+pilot-b7766c537f: submit, 15 tool calls, $0.005, top 3 ['redis_diskio', 'redis', 'frontend_latency']
+pilot-aa0cd7ab93: submit, 24 tool calls, $0.025, top 3 ['currencyservice', 'currencyservice_mem', 'currencyservice_cpu']
+pilot-17dabc3d73: submit, 16 tool calls, $0.007, top 3 ['checkoutservice', 'checkoutservice_cpu', 'redis']
+pilot-c74e271468: submit, 19 tool calls, $0.009, top 3 ['redis', 'redis_diskio', 'checkoutservice']
+pilot-daf8e55353: submit, 13 tool calls, $0.008, top 3 ['checkoutservice_cpu', 'checkoutservice_mem', 'checkoutservice']
+pilot-9eb4723efc: submit, 21 tool calls, $0.013, top 3 ['emailservice', 'emailservice_latency', 'checkoutservice']
+pilot-20c1b4033e: submit, 20 tool calls, $0.021, top 3 ['checkoutservice', 'shippingservice', 'emailservice']
+pilot-d4748067ca: submit, 15 tool calls, $0.007, top 3 ['checkoutservice', 'checkoutservice_mem', 'checkoutservice_cpu']
+pilot-67648f8749: submit, 17 tool calls, $0.005, top 3 ['currencyservice_mem', 'currencyservice', 'recommendationservice']
+pilot-2dc4761458: submit, 17 tool calls, $0.007, top 3 ['checkoutservice', 'checkoutservice_cpu', 'redis']
+pilot-30b0f33ab4: submit, 23 tool calls, $0.010, top 3 ['currencyservice_cpu', 'currencyservice', 'frontend_latency']
+pilot-c6e62423ee: submit, 18 tool calls, $0.008, top 3 ['paymentservice', 'currencyservice', 'currencyservice_latency']
+pilot-3a598ed869: submit, 16 tool calls, $0.007, top 3 ['currencyservice', 'currencyservice_latency', 'currencyservice_mem']
+pilot-c37e186a47: submit, 15 tool calls, $0.006, top 3 ['redis', 'redis_diskio', 'checkoutservice']
+pilot-8cc8834d31: submit, 12 tool calls, $0.005, top 3 ['checkoutservice_cpu', 'checkoutservice', 'checkoutservice_mem']
+pilot-dbe4a385dc: submit, 10 tool calls, $0.004, top 3 ['checkoutservice_mem', 'checkoutservice_cpu', 'checkoutservice']
+pilot-e9e664ec43: submit, 23 tool calls, $0.010, top 3 ['currencyservice', 'currencyservice_latency', 'checkoutservice']
+pilot-dcd033fadd: submit, 11 tool calls, $0.010, top 3 ['shippingservice', 'paymentservice', 'checkoutservice']
+pilot-c32297312c: submit, 17 tool calls, $0.017, top 3 ['paymentservice', 'paymentservice_latency', 'checkoutservice']
+pilot-bbcf5a68f8: submit, 16 tool calls, $0.008, top 3 ['checkoutservice_cpu', 'checkoutservice', 'checkoutservice_latency']
+pilot-30d8acbf16: submit, 13 tool calls, $0.013, top 3 ['checkoutservice', 'checkoutservice_mem', 'checkoutservice_cpu']
+pilot-03f6756e3d: submit, 18 tool calls, $0.018, top 3 ['checkoutservice', 'checkoutservice_latency', 'frontend']
+pilot-0d68368a1e: submit, 11 tool calls, $0.010, top 3 ['checkoutservice_cpu', 'checkoutservice_mem', 'checkoutservice']
+pilot-157ebaed81: submit, 18 tool calls, $0.018, top 3 ['redis', 'checkoutservice_latency', 'checkoutservice']
+pilot-ebf41fd692: submit, 11 tool calls, $0.005, top 3 ['checkoutservice_mem', 'checkoutservice_cpu', 'checkoutservice']
+pilot-fa691151ee: submit, 13 tool calls, $0.013, top 3 ['checkoutservice', 'checkoutservice_cpu', 'checkoutservice_mem']
+pilot-adec267ffb: submit, 15 tool calls, $0.014, top 3 ['currencyservice', 'currencyservice_cpu', 'checkoutservice_cpu']
+pilot-9fdc530e1a: submit, 12 tool calls, $0.006, top 3 ['checkoutservice_mem', 'checkoutservice_cpu', 'checkoutservice']
+pilot-d0da2ddd65: submit, 20 tool calls, $0.009, top 3 ['currencyservice', 'currencyservice_latency', 'frontend']
+pilot-b52536e732: submit, 22 tool calls, $0.022, top 3 ['redis', 'redis_diskio', 'cartservice']
+pilot-83048152f3: submit, 19 tool calls, $0.020, top 3 ['checkoutservice', 'redis', 'adservice']
+pilot-7081a419c7: submit, 17 tool calls, $0.017, top 3 ['redis', 'cartservice_latency', 'redis_diskio']
+pilot-b6d982d9f3: submit, 27 tool calls, $0.016, top 3 ['redis', 'redis_diskio', 'checkoutservice']
+pilot-49d72ea859: submit, 21 tool calls, $0.022, top 3 ['currencyservice', 'currencyservice_mem', 'currencyservice_diskio']
+pilot-a54a3723a2: submit, 17 tool calls, $0.016, top 3 ['checkoutservice', 'checkoutservice_cpu', 'redis']
+pilot-13b179afa0: submit, 21 tool calls, $0.022, top 3 ['recommendationservice', 'recommendationservice_latency', 'frontend_latency']
+pilot-76cd7ac320: submit, 13 tool calls, $0.008, top 3 ['checkoutservice', 'checkoutservice_cpu', 'redis']
+pilot-a352bd7044: submit, 22 tool calls, $0.011, top 3 ['currencyservice', 'currencyservice_latency', 'checkoutservice']
+pilot-0605b9df3b: submit, 14 tool calls, $0.006, top 3 ['checkoutservice_cpu', 'checkoutservice_mem', 'checkoutservice']
+pilot-3e08f8d292: submit, 18 tool calls, $0.017, top 3 ['currencyservice', 'currencyservice_cpu', 'frontend']
+pilot-df8d0cc0dc: submit, 10 tool calls, $0.005, top 3 ['checkoutservice', 'checkoutservice_mem', 'checkoutservice_cpu']
+pilot-0117529b65: submit, 20 tool calls, $0.010, top 3 ['currencyservice', 'checkoutservice', 'redis']
+pilot-6149ec2723: submit, 27 tool calls, $0.011, top 3 ['currencyservice', 'currencyservice_latency', 'frontend']
+pilot-6611fbac70: submit, 12 tool calls, $0.010, top 3 ['currencyservice', 'currencyservice_mem', 'currencyservice_latency']
+pilot-299c402e53: submit, 17 tool calls, $0.017, top 3 ['redis_diskio', 'cartservice', 'checkoutservice']
+pilot-02cf783f9a: submit, 20 tool calls, $0.020, top 3 ['currencyservice_mem', 'currencyservice_cpu', 'currencyservice_latency']
+pilot-2a3e8f0643: submit, 11 tool calls, $0.004, top 3 ['currencyservice', 'currencyservice_mem', 'checkoutservice']
+pilot-0b7dc237a9: submit, 16 tool calls, $0.015, top 3 ['currencyservice', 'currencyservice_cpu', 'currencyservice_latency']
+pilot-ee84ce27b9: submit, 14 tool calls, $0.013, top 3 ['currencyservice', 'currencyservice_mem', 'frontend']
+pilot-7f40d452da: submit, 19 tool calls, $0.018, top 3 ['shippingservice', 'shippingservice_latency', 'checkoutservice']
+pilot-59b6580cef: submit, 16 tool calls, $0.015, top 3 ['currencyservice', 'currencyservice_latency', 'currencyservice_cpu']
+pilot-f4a652d47e: submit, 30 tool calls, $0.033, top 3 ['checkoutservice', 'redis', 'shippingservice']
+pilot-26fa9344c8: submit, 15 tool calls, $0.014, top 3 ['checkoutservice', 'checkoutservice_cpu', 'adservice']
+pilot-03ed6ccdbd: submit, 12 tool calls, $0.012, top 3 ['currencyservice', 'currencyservice_mem', 'currencyservice_cpu']
+pilot-8097dd9ea5: submit, 13 tool calls, $0.007, top 3 ['checkoutservice', 'checkoutservice_cpu', 'checkoutservice_mem']
+pilot-23837d3338: submit, 17 tool calls, $0.017, top 3 ['checkoutservice', 'checkoutservice_mem', 'checkoutservice_cpu']
+pilot-2a420c7f0e: submit, 16 tool calls, $0.007, top 3 ['checkoutservice', 'checkoutservice_latency', 'paymentservice']
+pilot-f3a6c41876: submit, 17 tool calls, $0.007, top 3 ['currencyservice', 'currencyservice_latency', 'frontend']
+pilot-8524fc00d7: submit, 25 tool calls, $0.026, top 3 ['shippingservice', 'shippingservice_latency', 'checkoutservice']
+pilot-dc8e8423c7: submit, 17 tool calls, $0.016, top 3 ['cartservice', 'redis', 'checkoutservice']
+pilot-54e7f96024: submit, 21 tool calls, $0.021, top 3 ['checkoutservice', 'paymentservice', 'redis']
+pilot-f78e0d9de2: submit, 22 tool calls, $0.023, top 3 ['currencyservice', 'currencyservice_mem', 'currencyservice_cpu']
+pilot-0bfa1300eb: submit, 15 tool calls, $0.014, top 3 ['checkoutservice', 'checkoutservice_cpu', 'redis']
+pilot-136c9bc1fb: submit, 17 tool calls, $0.017, top 3 ['currencyservice_mem', 'currencyservice', 'currencyservice_cpu']
+pilot-b6e1839f53: submit, 17 tool calls, $0.017, top 3 ['checkoutservice_mem', 'checkoutservice_cpu', 'checkoutservice']
+pilot-8f3f6a5a3c: submit, 21 tool calls, $0.011, top 3 ['currencyservice', 'currencyservice_latency', 'frontend']
+pilot-c2090171ca: submit, 20 tool calls, $0.022, top 3 ['currencyservice', 'currencyservice_mem', 'currencyservice_latency']
+pilot-86907710a5: submit, 16 tool calls, $0.016, top 3 ['paymentservice', 'redis', 'checkoutservice']
+pilot-4c641e68fa: submit, 23 tool calls, $0.024, top 3 ['shippingservice', 'shippingservice_latency', 'emailservice']
+pilot-da600dc0ab: submit, 15 tool calls, $0.014, top 3 ['checkoutservice', 'checkoutservice_mem', 'checkoutservice_cpu']
+pilot-ee8d751c54: submit, 14 tool calls, $0.006, top 3 ['checkoutservice_mem', 'checkoutservice_cpu', 'checkoutservice_latency']
+pilot-c5fcca0a8a: submit, 21 tool calls, $0.022, top 3 ['currencyservice', 'currencyservice_mem', 'currencyservice_cpu']
+pilot-8b8dbd925d: submit, 13 tool calls, $0.006, top 3 ['currencyservice_mem', 'currencyservice', 'currencyservice_latency']
+pilot-38a18bfa41: submit, 11 tool calls, $0.009, top 3 ['checkoutservice', 'checkoutservice_mem', 'checkoutservice_cpu']
+pilot-90ebe345e3: submit, 18 tool calls, $0.007, top 3 ['currencyservice', 'checkoutservice', 'frontend']
+pilot-8483e63673: submit, 13 tool calls, $0.006, top 3 ['checkoutservice', 'checkoutservice_cpu', 'checkoutservice_mem']
+pilot-5974c7fd94: submit, 10 tool calls, $0.008, top 3 ['checkoutservice', 'checkoutservice_mem', 'checkoutservice_cpu']
+pilot-8709b0964a: submit, 12 tool calls, $0.012, top 3 ['checkoutservice', 'checkoutservice_cpu', 'checkoutservice_mem']
+pilot-30a6ca5384: submit, 18 tool calls, $0.007, top 3 ['currencyservice', 'currencyservice_mem', 'redis']
+pilot-0a97c5cc23: submit, 16 tool calls, $0.015, top 3 ['currencyservice', 'redis', 'emailservice']
+pilot-e3def1b45c: submit, 15 tool calls, $0.015, top 3 ['checkoutservice', 'checkoutservice_cpu', 'checkoutservice_latency']
+pilot-974449f228: submit, 24 tool calls, $0.026, top 3 ['currencyservice', 'currencyservice_latency', 'currencyservice_mem']
