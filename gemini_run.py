@@ -9,6 +9,8 @@ wrapped so free-tier limits do not break the run:
 - a per-day 429 stops cleanly. The case in progress is not written, so the
   next `./run_pilot.sh run` (for example tomorrow) redoes it and skips finished ones.
 
+It also repairs RCAEval's tool specs for the Gemini path; see `fix_tool_specs`.
+
   python gemini_run.py --tasks pilot_tasks/pilot --model gemini/gemini-3.5-flash-lite \
       --out pilot_preds.jsonl
 """
@@ -18,6 +20,7 @@ import re
 import sys
 import threading
 import time
+from copy import deepcopy
 
 EXIT_DAILY_QUOTA = 75   # run_pilot.sh reads this to print "rerun tomorrow"
 
@@ -70,6 +73,30 @@ def paced_completion(base, rpm, max_retries=8, sleep=time.sleep, clock=time.mono
     return call
 
 
+def fix_tool_specs():
+    """Stop LiteLLM's Gemini transform from breaking RCAEval's zero-argument tools.
+
+    RCAEval shares one dict per tool between `react.TOOL_SPECS` (sent to the model)
+    and `toolkit.TOOLS` (read by `CaseToolkit.call` to validate arguments). LiteLLM's
+    Gemini transform strips empty `properties: {}` from the schema in place, because
+    Gemini rejects it. The first Gemini call therefore deletes the key that
+    `CaseToolkit.call` needs, and for the rest of the process every `describe_case`
+    and `call_graph` call fails with `KeyError: 'properties'`.
+
+    That matters: `describe_case` is the tool the prompt tells the agent to call
+    first. Measured here on 2026-11-12 (RCAEval 1.12.0, LiteLLM 1.108.3), leaving it
+    broken gave a 69.3% tool-call failure rate, forced 6 of 10 runs to guess at the
+    30-step cap, and made repeat runs disagree at temperature 0 in 3 of 4 cases.
+    With this copy in place the same 10 cases gave 0.5% and no capped runs.
+
+    Giving the model its own copies leaves `toolkit.TOOLS` intact.
+    """
+    from RCAEval.agent import react
+    from RCAEval.agent.toolkit import TOOLS
+
+    react.TOOL_SPECS = [{"type": "function", "function": deepcopy(t)} for t in TOOLS]
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--tasks", required=True)
@@ -88,6 +115,7 @@ def main():
 
     from RCAEval.agent.react import litellm_completion, run_tasks
 
+    fix_tool_specs()
     completion = paced_completion(litellm_completion(), a.rpm)
     try:
         run_tasks(a.tasks, a.model, a.out, cases=a.cases or None, workers=a.workers,
