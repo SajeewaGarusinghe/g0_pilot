@@ -110,6 +110,13 @@ strips empty `properties: {}` in place, so after the first Gemini call every
 `describe_case` and `call_graph` call fails with `KeyError: 'properties'` for the rest
 of the process. `describe_case` is the tool the prompt tells the agent to call first.
 
+The 144-run pilot was executed with this same `deepcopy` applied directly to the
+installed `RCAEval/agent/react.py`, before the workaround was moved into
+`gemini_run.py` so that it survives a fresh `./setup.sh`. The two are the same change
+(the model gets its own copies of the tool schemas, `toolkit.TOOLS` is left intact);
+the committed `fix_tool_specs` form was then verified end-to-end against an unmodified
+`react.py`, giving 0 tool failures in 12 calls with `describe_case` working.
+
 Measured on the same 10 calibration cases:
 
 | | before the repair | after |
@@ -148,3 +155,5 @@ two must not be pooled.
 | `score.log` | Scoring output as produced, including the two misleading lines noted above |
 | `trajectories/` | Full reasoning trace per run, 144 files |
 | `calibration/` | The 10-case calibration before and after the tool-spec repair |
+| `calibration/{pre,post}fix_trajectories/` | Traces for those two calibrations: the audit trail for the 69.3% -> 0.5% figures |
+| `run.log` | Console output of the 144-run run, LiteLLM deprecation warnings stripped. Evidence for "no HTTP 5xx, no 429s, no retries" |
