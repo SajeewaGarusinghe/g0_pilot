@@ -1,0 +1,44 @@
+
+Per family (n = runs done; answered = share that submitted a ranking):
+         n    TBR    AC1  answered   cost
+family                                   
+F1      36  0.250  0.611       1.0  0.012
+F2      36  0.111  0.694       1.0  0.012
+F3      36  0.056  0.667       1.0  0.014
+clean   36  0.000  0.778       1.0  0.012
+
+Delta TBR vs clean, template-cluster bootstrap (10,000 resamples):
+  F1: +0.250  95% CI [+0.083, +0.444]  (at/above 15 pts; 36 case pairs, 12 templates)
+  F2: +0.111  95% CI [+0.028, +0.194]  (below 15-pt planning trigger; 36 case pairs, 12 templates)
+  F3: +0.056  95% CI [+0.000, +0.139]  (below 15-pt planning trigger; 36 case pairs, 12 templates)
+
+Model gemini/gemini-3.5-flash-lite: mean 65,284 input and 437 output tokens, 12.1 model turns per run
+Cost per run at LiteLLM's paid-tier price (you pay $0 on the free tier): $0.0125 (median $0.0112); total $1.81 over 144 runs
+Projected 9,614 frozen runs at this mean, with this model: $121
+Not a Claude cost estimate: the frozen model's cost must be measured on that model.
+--- Evaluation results (re2-ob, 144 cases) ---
+Coverage:    144/144 cases predicted
+             service    indicator
+AC@1:        0.69       0.08
+AC@3:        0.83       0.43
+AC@5:        0.86       0.47
+Avg@5:       0.80       0.37
+--- Avg@5 by fault (service level) ---
+Avg@5-CPU:   0.68
+Avg@5-MEM:   1.00
+Avg@5-DISK:  0.99
+Avg@5-SOCKET: 0.53
+Avg@5-DELAY: 0.80
+Avg@5-LOSS:  0.78
+--- Evidence (144 cases with trajectories) ---
+Inspected@root:        0.86 (a tool call targeted the root-cause service before submit)
+AC@1 if inspected:     0.80
+AC@1 if not inspected: 0.00
+--- Usage ---
+input_tokens:   total 9.40085e+06, mean 65283.7 over 144 cases
+output_tokens:  total 62949, mean 437.146 over 144 cases
+cost_usd:       total 1.80567, mean 0.0125394 over 144 cases
+wall_time_s:    total 6963.81, mean 48.3598 over 144 cases
+tool_calls:     total 2529, mean 17.5625 over 144 cases
+steps:          total 1738, mean 12.0694 over 144 cases
+---

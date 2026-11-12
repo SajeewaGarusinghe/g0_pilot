@@ -11,5 +11,7 @@ logs/
 dev_cases.json
 __pycache__/
 
-# The 36 G0 development cases are committed for the record (see 09-results/g0/).
-!09-results/g0/dev_cases.json
+# G0 results are committed for the record. The rules above (*.jsonl, dev_cases.json,
+# pilot_sealed/, logs/) are about the working copies at the repo root; the published
+# results under 09-results/g0/ are deliberately tracked.
+!09-results/g0/**

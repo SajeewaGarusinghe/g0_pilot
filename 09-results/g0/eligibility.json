@@ -1,0 +1,2606 @@
+[
+  {
+    "case": "re2-ob-0001",
+    "target": "emailservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0004",
+    "target": "recommendationservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0008",
+    "target": "emailservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0009",
+    "target": "paymentservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0011",
+    "target": "emailservice",
+    "checks": {
+      "InboundPassthroughClusterIpv4": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "PassthroughCluster": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0013",
+    "target": "recommendationservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0014",
+    "target": "recommendationservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0017",
+    "target": "paymentservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0020",
+    "target": "paymentservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0021",
+    "target": "currencyservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0023",
+    "target": "paymentservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0029",
+    "target": "paymentservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0030",
+    "target": "recommendationservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0033",
+    "target": "currencyservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0036",
+    "target": "emailservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0039",
+    "target": "currencyservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0047",
+    "target": "emailservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0049",
+    "target": "recommendationservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0051",
+    "target": "paymentservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0053",
+    "target": "paymentservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0056",
+    "target": "recommendationservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0058",
+    "target": "currencyservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0059",
+    "target": "emailservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0060",
+    "target": "paymentservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0061",
+    "target": "checkoutservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0064",
+    "target": "emailservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0067",
+    "target": "currencyservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-check": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0068",
+    "target": "checkoutservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0070",
+    "target": "currencyservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0072",
+    "target": "paymentservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0075",
+    "target": "recommendationservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0076",
+    "target": "currencyservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0077",
+    "target": "emailservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "istio-init": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0079",
+    "target": "checkoutservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0086",
+    "target": "recommendationservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "currencyservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  },
+  {
+    "case": "re2-ob-0089",
+    "target": "recommendationservice",
+    "checks": {
+      "adservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "cartservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "checkoutservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "emailservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "frontend": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "frontend-external": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": false
+      },
+      "paymentservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "productcatalogservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": false
+      },
+      "recommendationservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": true,
+        "has_logs": true
+      },
+      "redis": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      },
+      "shippingservice": {
+        "not_root": true,
+        "in_candidates": true,
+        "has_callers": false,
+        "has_logs": true
+      }
+    }
+  }
+]
