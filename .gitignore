@@ -10,3 +10,6 @@ logs/
 *.trajectories/
 dev_cases.json
 __pycache__/
+
+# The 36 G0 development cases are committed for the record (see 09-results/g0/).
+!09-results/g0/dev_cases.json
