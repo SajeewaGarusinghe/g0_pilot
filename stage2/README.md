@@ -1,9 +1,19 @@
-# G0 stage 2 — steps 1–3: trace schema audit, role inference, attempt matching
+# G0 stage 2 — steps 1–7 on the data
 
-Build-guide `P0` steps 1, 2 and 3 for *Verifying Telemetry Before Trusting It*. All three read
-the same `traces.csv`, so they run as one pass per case. Evidence goes to the knowledge base
-at `Msc-project/09-results/g0/` (`01-schema-audit.md`, `02-role-inference.md`,
-`03-attempt-matching.md`); this folder holds only the code and its raw aggregates.
+Build-guide `P0` steps 1–3 and 7 for *Verifying Telemetry Before Trusting It*. Steps 1–3 read the
+same `traces.csv` and run as one pass per case; step 7 is a second pass that applies the candidate
+rules to every matched pair. Steps 4–6 are source reading, not code — their provenance manifest is
+`sources/manifest.py`. Evidence goes to the knowledge base at `Msc-project/09-results/g0/`
+(`01-schema-audit.md` … `07-rule-prototype.md`); this folder holds only the code and its raw
+aggregates.
+
+| Script | Build-guide step | What it does |
+|---|---|---|
+| `audit_traces.py` | 1, 2, 3 | per-case schema, role-inference coverage, attempt matching |
+| `summarize.py` | 1, 2, 3 | pooled and per-case-spread aggregates into `out/<date>/agg/` |
+| `pairs.py` | (shared) | builds the matched client/server pairs; `--check` asserts it reproduces the counts `audit_traces.py` published |
+| `rules_prototype.py` | 7 | applies R1 and R2 to every clean matched pair: ε ladder, violations, slack, forgery headroom |
+| `sources/manifest.py` | 4, 5, 6 | records every upstream file read, with version and SHA-256 |
 
 **This is a prototype.** P3 rewrites the matcher with unit tests (build guide P0, "Do not
 polish the P0 scripts").
@@ -17,13 +27,21 @@ source .venv/bin/activate
 # NOT downloaded, so download_re3_dataset() must never be used.
 python -c "from RCAEval.utility import download_re3tt_dataset; download_re3tt_dataset(local_path='data/RE3')"
 
+# steps 1-3
 python stage2/audit_traces.py --dataset re2-ob-dev --out stage2/out/<date>   # 36 dev cases
 python stage2/audit_traces.py --dataset re3-tt     --out stage2/out/<date>   # 30 TT cases
 python stage2/summarize.py --out stage2/out/<date>                           # -> out/<date>/agg/
+
+# step 7
+python stage2/rules_prototype.py --dataset re2-ob-dev --out stage2/out/step7-<date>
+python stage2/rules_prototype.py --dataset re3-tt     --out stage2/out/step7-<date>
+
+# steps 4-6 provenance
+python stage2/sources/manifest.py /home/opc/stage2-sources > stage2/sources/manifest.csv
 ```
 
-Roughly 15 s per RE2-OB case and 5 s per RE3-TT case, serial, one case in memory at a time.
-`--limit N` / `--only <case>` audit a subset.
+Each pass is about 15 s per RE2-OB case and 5 s per RE3-TT case, serial, one case in memory at a
+time. `--limit N` / `--only <case>` audit a subset.
 
 ## Data hygiene (AGENTS.md §6; build-guide test P0-T1)
 
@@ -84,6 +102,24 @@ Reason-code note: A3's `AMB_DUPLICATE` covers both a duplicate span id and "more
 candidate partner". This script splits the second case into `AMB_REUSED_CTX` (several
 cross-service children, same method — retries/fan-out) and `AMB_NON_1TO1` (different methods),
 so the two are visible separately; the evidence files say so.
+
+## Step 7 outputs (`out/step7-<date>/`)
+
+| File | Holds |
+|---|---|
+| `case_totals.csv` | per case: pairs, role tiers, R1 violations at ε=0, minimum slack, R2 disagreements |
+| `r1_by_route.csv` | per case × route × role tier: violations at each ε on the ladder, excess and slack quantiles, the forgery-headroom ratio, and a clock-offset diagnostic |
+| `r1_violations.csv` | every violating pair (capped per case; `case_totals.csv` keeps the exact count) |
+| `r2_by_route.csv` | per route: pairs with both codes present, agreeing, differing |
+| `r2_disagreements.csv` | every pair whose two codes differ, with both durations and span ids |
+
+**ε is not fitted.** The proposal rejects calibrating to a false-alarm rate, so the script reports
+the violation count at a ladder of principled values (0, 1 µs = the recorded timer resolution, then
+upward) and the full excess distribution, and leaves the choice to the written argument.
+
+**R1 compares durations, not timestamps.** That is what makes it immune to clock offsets between
+hosts. Interval containment is computed too, but only as a diagnostic for how much offset exists
+(an input to the AF1 honest-fault family); it is not R1 and is labelled so in the output.
 
 ## Limits
 
