@@ -1,0 +1,5 @@
+dataset,parent_op_form,child_op_form,op_tier,explained_by_normalisation,n,example_parent_op,example_child_op
+re2-ob-dev,bare,grpc_prefix,norm_equal,True,1958448,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,bare,slash_prefix,norm_equal,True,480406,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,slash_prefix,bare,norm_equal,True,457381,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re3-tt,bare,bare,verb_only_consistent,False,884119,GET,GET /api/v1/configservice/configs

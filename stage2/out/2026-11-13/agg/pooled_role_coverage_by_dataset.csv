@@ -1,0 +1,3 @@
+dataset,cross_edges,meth_match,meth_unavailable,op_raw_match,op_norm_match,op_verb_only,op_unavailable,op_mismatch,caller_same_svc,caller_root,caller_dangling,caller_other_svc,role_strong,role_root_client,role_weak_verb_only,role_na,share_role_strong,share_role_root_client,share_role_weak_verb_only,share_role_na,share_op_raw_match,share_op_norm_match,share_meth_unavailable,strong_share_per_case_min_med_max
+re2-ob-dev,5956136,5956136,0,3059901,5956136,0,0,0,5876730,79192,214,0,5876730,79192,0,214,0.9867,0.0133,0.0,0.0,0.5137,1.0,0.0,0.9856 / 0.9867 / 0.9873
+re3-tt,884119,0,884119,0,0,884119,0,0,884056,0,63,0,0,0,884056,63,0.0,0.0,0.9999,0.0001,0.0,0.0,1.0,0.0000 / 0.0000 / 0.0000

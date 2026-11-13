@@ -1,0 +1,139 @@
+dataset,case_id,parent_op_form,child_op_form,op_tier,explained_by_normalisation,n,example_parent_op,example_child_op
+re2-ob-dev,re2-ob-0001,bare,grpc_prefix,norm_equal,True,56978,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0001,bare,slash_prefix,norm_equal,True,13778,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0001,slash_prefix,bare,norm_equal,True,13158,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0004,bare,grpc_prefix,norm_equal,True,55413,hipstershop.CurrencyService/Convert,grpc.hipstershop.CurrencyService/Convert
+re2-ob-dev,re2-ob-0004,bare,slash_prefix,norm_equal,True,13598,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0004,slash_prefix,bare,norm_equal,True,12929,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0008,bare,grpc_prefix,norm_equal,True,57540,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0008,bare,slash_prefix,norm_equal,True,14045,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0008,slash_prefix,bare,norm_equal,True,13392,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0009,bare,grpc_prefix,norm_equal,True,56825,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0009,bare,slash_prefix,norm_equal,True,14061,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0009,slash_prefix,bare,norm_equal,True,13382,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0011,bare,grpc_prefix,norm_equal,True,27671,hipstershop.CurrencyService/Convert,grpc.hipstershop.CurrencyService/Convert
+re2-ob-dev,re2-ob-0011,bare,slash_prefix,norm_equal,True,7036,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0011,slash_prefix,bare,norm_equal,True,6645,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0013,bare,grpc_prefix,norm_equal,True,52262,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0013,bare,slash_prefix,norm_equal,True,12574,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0013,slash_prefix,bare,norm_equal,True,11986,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0014,bare,grpc_prefix,norm_equal,True,54280,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0014,bare,slash_prefix,norm_equal,True,13378,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0014,slash_prefix,bare,norm_equal,True,12680,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0017,bare,grpc_prefix,norm_equal,True,58014,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0017,bare,slash_prefix,norm_equal,True,14132,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0017,slash_prefix,bare,norm_equal,True,13459,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0020,bare,grpc_prefix,norm_equal,True,49915,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0020,bare,slash_prefix,norm_equal,True,12291,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0020,slash_prefix,bare,norm_equal,True,11716,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0021,bare,grpc_prefix,norm_equal,True,57095,hipstershop.CurrencyService/Convert,grpc.hipstershop.CurrencyService/Convert
+re2-ob-dev,re2-ob-0021,bare,slash_prefix,norm_equal,True,14173,hipstershop.EmailService/SendOrderConfirmation,/hipstershop.EmailService/SendOrderConfirmation
+re2-ob-dev,re2-ob-0021,slash_prefix,bare,norm_equal,True,13473,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0023,bare,grpc_prefix,norm_equal,True,54427,hipstershop.CurrencyService/Convert,grpc.hipstershop.CurrencyService/Convert
+re2-ob-dev,re2-ob-0023,bare,slash_prefix,norm_equal,True,13400,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0023,slash_prefix,bare,norm_equal,True,12755,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0029,bare,grpc_prefix,norm_equal,True,53555,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0029,bare,slash_prefix,norm_equal,True,13176,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0029,slash_prefix,bare,norm_equal,True,12556,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0030,bare,grpc_prefix,norm_equal,True,56440,hipstershop.CurrencyService/Convert,grpc.hipstershop.CurrencyService/Convert
+re2-ob-dev,re2-ob-0030,bare,slash_prefix,norm_equal,True,13828,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0030,slash_prefix,bare,norm_equal,True,13149,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0033,bare,grpc_prefix,norm_equal,True,57906,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0033,bare,slash_prefix,norm_equal,True,14145,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0033,slash_prefix,bare,norm_equal,True,13476,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0036,bare,grpc_prefix,norm_equal,True,56771,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0036,bare,slash_prefix,norm_equal,True,14018,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0036,slash_prefix,bare,norm_equal,True,13355,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0039,bare,grpc_prefix,norm_equal,True,54523,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0039,bare,slash_prefix,norm_equal,True,13365,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0039,slash_prefix,bare,norm_equal,True,12751,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0047,bare,grpc_prefix,norm_equal,True,38471,hipstershop.CurrencyService/Convert,grpc.hipstershop.CurrencyService/Convert
+re2-ob-dev,re2-ob-0047,bare,slash_prefix,norm_equal,True,9608,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0047,slash_prefix,bare,norm_equal,True,9148,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0049,bare,grpc_prefix,norm_equal,True,56633,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0049,bare,slash_prefix,norm_equal,True,14158,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0049,slash_prefix,bare,norm_equal,True,13474,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0051,bare,grpc_prefix,norm_equal,True,50732,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0051,bare,slash_prefix,norm_equal,True,12578,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0051,slash_prefix,bare,norm_equal,True,11976,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0053,bare,grpc_prefix,norm_equal,True,57245,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0053,bare,slash_prefix,norm_equal,True,13806,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0053,slash_prefix,bare,norm_equal,True,13173,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0056,bare,grpc_prefix,norm_equal,True,55220,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0056,bare,slash_prefix,norm_equal,True,13300,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0056,slash_prefix,bare,norm_equal,True,12651,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0058,bare,grpc_prefix,norm_equal,True,57088,hipstershop.CurrencyService/Convert,grpc.hipstershop.CurrencyService/Convert
+re2-ob-dev,re2-ob-0058,bare,slash_prefix,norm_equal,True,14134,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0058,slash_prefix,bare,norm_equal,True,13421,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0059,bare,grpc_prefix,norm_equal,True,57330,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0059,bare,slash_prefix,norm_equal,True,13856,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0059,slash_prefix,bare,norm_equal,True,13238,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0060,bare,grpc_prefix,norm_equal,True,57627,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0060,bare,slash_prefix,norm_equal,True,14187,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0060,slash_prefix,bare,norm_equal,True,13478,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0061,bare,grpc_prefix,norm_equal,True,56389,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0061,bare,slash_prefix,norm_equal,True,14030,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0061,slash_prefix,bare,norm_equal,True,13358,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0064,bare,grpc_prefix,norm_equal,True,57551,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0064,bare,slash_prefix,norm_equal,True,13987,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0064,slash_prefix,bare,norm_equal,True,13329,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0067,bare,grpc_prefix,norm_equal,True,57207,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0067,bare,slash_prefix,norm_equal,True,13967,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0067,slash_prefix,bare,norm_equal,True,13296,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0068,bare,grpc_prefix,norm_equal,True,54892,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0068,bare,slash_prefix,norm_equal,True,13402,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0068,slash_prefix,bare,norm_equal,True,12774,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0070,bare,grpc_prefix,norm_equal,True,58102,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0070,bare,slash_prefix,norm_equal,True,14220,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0070,slash_prefix,bare,norm_equal,True,13555,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0072,bare,grpc_prefix,norm_equal,True,54489,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0072,bare,slash_prefix,norm_equal,True,13075,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0072,slash_prefix,bare,norm_equal,True,12428,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0075,bare,grpc_prefix,norm_equal,True,46570,hipstershop.CurrencyService/Convert,grpc.hipstershop.CurrencyService/Convert
+re2-ob-dev,re2-ob-0075,bare,slash_prefix,norm_equal,True,11365,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0075,slash_prefix,bare,norm_equal,True,10754,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0076,bare,grpc_prefix,norm_equal,True,57763,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0076,bare,slash_prefix,norm_equal,True,14149,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0076,slash_prefix,bare,norm_equal,True,13517,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0077,bare,grpc_prefix,norm_equal,True,57499,hipstershop.CurrencyService/Convert,grpc.hipstershop.CurrencyService/Convert
+re2-ob-dev,re2-ob-0077,bare,slash_prefix,norm_equal,True,13971,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0077,slash_prefix,bare,norm_equal,True,13337,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0079,bare,grpc_prefix,norm_equal,True,57333,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0079,bare,slash_prefix,norm_equal,True,14170,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0079,slash_prefix,bare,norm_equal,True,13480,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0086,bare,grpc_prefix,norm_equal,True,55154,hipstershop.CurrencyService/GetSupportedCurrencies,grpc.hipstershop.CurrencyService/GetSupportedCurrencies
+re2-ob-dev,re2-ob-0086,bare,slash_prefix,norm_equal,True,13603,hipstershop.RecommendationService/ListRecommendations,/hipstershop.RecommendationService/ListRecommendations
+re2-ob-dev,re2-ob-0086,slash_prefix,bare,norm_equal,True,12952,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re2-ob-dev,re2-ob-0089,bare,grpc_prefix,norm_equal,True,55538,hipstershop.CurrencyService/Convert,grpc.hipstershop.CurrencyService/Convert
+re2-ob-dev,re2-ob-0089,bare,slash_prefix,norm_equal,True,13842,hipstershop.EmailService/SendOrderConfirmation,/hipstershop.EmailService/SendOrderConfirmation
+re2-ob-dev,re2-ob-0089,slash_prefix,bare,norm_equal,True,13180,/hipstershop.ProductCatalogService/ListProducts,hipstershop.ProductCatalogService/ListProducts
+re3-tt,ts-auth-service_f1/1,bare,bare,verb_only_consistent,False,21540,GET,GET /api/v1/configservice/configs
+re3-tt,ts-auth-service_f1/2,bare,bare,verb_only_consistent,False,20852,GET,GET /api/v1/foodmapservice/trainfoods/{tripId}
+re3-tt,ts-auth-service_f1/3,bare,bare,verb_only_consistent,False,22421,POST,POST /api/v1/stationservice/stations/namelist
+re3-tt,ts-auth-service_f1/4,bare,bare,verb_only_consistent,False,7107,GET,GET /api/v1/ticketinfoservice/ticketinfo/{name}
+re3-tt,ts-auth-service_f2/1,bare,bare,verb_only_consistent,False,24496,GET,GET /api/v1/ticketinfoservice/ticketinfo/{name}
+re3-tt,ts-auth-service_f2/2,bare,bare,verb_only_consistent,False,22651,GET,GET /api/v1/priceservice/prices
+re3-tt,ts-auth-service_f2/3,bare,bare,verb_only_consistent,False,21337,GET,GET /api/v1/priceservice/prices
+re3-tt,ts-auth-service_f2/4,bare,bare,verb_only_consistent,False,7388,GET,GET /api/v1/stationservice/stations/id/{stationNameForId}
+re3-tt,ts-auth-service_f3/1,bare,bare,verb_only_consistent,False,21381,GET,GET /api/v1/ticketinfoservice/ticketinfo/{name}
+re3-tt,ts-auth-service_f3/2,bare,bare,verb_only_consistent,False,22147,GET,GET /api/v1/ticketinfoservice/ticketinfo/{name}
+re3-tt,ts-auth-service_f3/3,bare,bare,verb_only_consistent,False,21948,GET,GET /api/v1/stationservice/stations/id/{stationNameForId}
+re3-tt,ts-auth-service_f3/4,bare,bare,verb_only_consistent,False,6976,GET,GET /api/v1/configservice/configs
+re3-tt,ts-auth-service_f4/1,bare,bare,verb_only_consistent,False,21426,GET,GET /api/v1/ticketinfoservice/ticketinfo/{name}
+re3-tt,ts-auth-service_f4/2,bare,bare,verb_only_consistent,False,22080,GET,GET /api/v1/travelservice/admin_trip
+re3-tt,ts-auth-service_f4/3,bare,bare,verb_only_consistent,False,23101,GET,GET /api/v1/ticketinfoservice/ticketinfo/{name}
+re3-tt,ts-route-service_f1/1,bare,bare,verb_only_consistent,False,40278,GET,GET /api/v1/priceservice/prices
+re3-tt,ts-route-service_f1/2,bare,bare,verb_only_consistent,False,42336,GET,GET /api/v1/foodmapservice/trainfoods/{tripId}
+re3-tt,ts-route-service_f1/3,bare,bare,verb_only_consistent,False,40558,GET,GET /api/v1/ticketinfoservice/ticketinfo/{name}
+re3-tt,ts-route-service_f2/1,bare,bare,verb_only_consistent,False,42048,GET,GET /api/v1/priceservice/prices
+re3-tt,ts-route-service_f2/2,bare,bare,verb_only_consistent,False,38264,GET,GET /api/v1/travelservice/admin_trip
+re3-tt,ts-route-service_f2/3,bare,bare,verb_only_consistent,False,39988,GET,GET /api/v1/travelservice/admin_trip
+re3-tt,ts-route-service_f3/1,bare,bare,verb_only_consistent,False,42475,GET,GET /api/v1/ticketinfoservice/ticketinfo/{name}
+re3-tt,ts-route-service_f3/2,bare,bare,verb_only_consistent,False,38364,GET,GET /api/v1/stationservice/stations/id/{stationNameForId}
+re3-tt,ts-route-service_f3/3,bare,bare,verb_only_consistent,False,38839,GET,GET /api/v1/ticketinfoservice/ticketinfo/{name}
+re3-tt,ts-route-service_f3_1/1,bare,bare,verb_only_consistent,False,38408,GET,GET /api/v1/priceservice/prices
+re3-tt,ts-route-service_f3_1/2,bare,bare,verb_only_consistent,False,38519,GET,GET /api/v1/travelservice/admin_trip
+re3-tt,ts-route-service_f3_1/3,bare,bare,verb_only_consistent,False,40684,GET,GET /api/v1/trainservice/trains/{id}
+re3-tt,ts-route-service_f4/1,bare,bare,verb_only_consistent,False,38540,GET,GET /api/v1/travelservice/admin_trip
+re3-tt,ts-route-service_f4/2,bare,bare,verb_only_consistent,False,38599,GET,GET /api/v1/ticketinfoservice/ticketinfo/{name}
+re3-tt,ts-route-service_f4/3,bare,bare,verb_only_consistent,False,39368,GET,GET /api/v1/routeservice/routes/{routeId}

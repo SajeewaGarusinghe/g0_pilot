@@ -1,0 +1,145 @@
+dataset,call,spans,server_spans_anywhere,client_spans_with_callee,callee_emits_spans,services
+re2-ob-dev,frontend,653609,0,0,False,frontendservice
+re2-ob-dev,GetCart,526210,0,0,False,checkoutservice|frontendservice
+re2-ob-dev,GetAds,366113,0,0,False,frontendservice
+re2-ob-dev,GetQuote,159849,0,0,False,checkoutservice|frontendservice
+re2-ob-dev,Check,80875,0,0,False,checkoutservice|currencyservice|emailservice|paymentservice|productcatalogservice|recommendationservice
+re2-ob-dev,AddItem,69156,0,0,False,frontendservice
+re2-ob-dev,Export,34181,0,0,False,checkoutservice|frontendservice|productcatalogservice
+re2-ob-dev,ShipOrder,22967,0,0,False,checkoutservice
+re2-ob-dev,EmptyCart,22966,0,0,False,checkoutservice
+re2-ob-dev,GetProduct,5937069,2968289,2968289,True,checkoutservice|frontendservice|productcatalogservice
+re2-ob-dev,Convert,2820160,1409529,1409529,True,checkoutservice|currencyservice|frontendservice
+re2-ob-dev,GetSupportedCurrencies,1054244,525954,525954,True,currencyservice|frontendservice
+re2-ob-dev,ListProducts,1051977,525923,525923,True,frontendservice|productcatalogservice|recommendationservice
+re2-ob-dev,ListRecommendations,914956,457441,457441,True,frontendservice|recommendationservice
+re2-ob-dev,PlaceOrder,46197,23070,23070,True,checkoutservice|frontendservice
+re2-ob-dev,Charge,45944,22965,22965,True,checkoutservice|paymentservice
+re2-ob-dev,SendOrderConfirmation,45941,22965,22965,True,checkoutservice|emailservice
+re3-tt,GET,795636,0,795059,False,ts-admin-basic-info-service|ts-admin-travel-service|ts-basic-service|ts-consign-service|ts-food-service|ts-inside-payment-service|ts-preserve-other-service|ts-preserve-service|ts-seat-service|ts-security-service|ts-ticketinfo-service|ts-travel-service|ts-travel2-service
+re3-tt,find ts.station,454800,0,0,False,ts-station-service
+re3-tt,StationRepository.findById,302246,0,0,False,ts-station-service
+re3-tt,TrainTypeRepository.findById,267702,0,0,False,ts-train-service
+re3-tt,find ts.trainType,267702,0,0,False,ts-train-service
+re3-tt,RouteRepository.findById,176233,0,0,False,ts-route-service
+re3-tt,find ts.routes,176233,0,0,False,ts-route-service
+re3-tt,StationRepository.findByName,152554,0,0,False,ts-station-service
+re3-tt,POST,89060,0,89060,False,ts-food-service|ts-inside-payment-service|ts-order-other-service|ts-order-service|ts-preserve-other-service|ts-preserve-service|ts-seat-service|ts-ticketinfo-service|ts-travel-service|ts-travel2-service
+re3-tt,find ts.trip,86039,0,0,False,ts-travel-service|ts-travel2-service
+re3-tt,TripRepository.findByTripId,58768,0,0,False,ts-travel-service|ts-travel2-service
+re3-tt,find ts.orders,45515,0,0,False,ts-order-other-service|ts-order-service
+re3-tt,UserRepository.findByUsername,44554,0,0,False,ts-auth-service
+re3-tt,find ts-auth-mongo.user,44554,0,0,False,ts-auth-service
+re3-tt,find ts.config,35146,0,0,False,ts-config-service
+re3-tt,TripRepository.findAll,27271,0,0,False,ts-travel-service|ts-travel2-service
+re3-tt,ConfigRepository.findByName,26808,0,0,False,ts-config-service
+re3-tt,POST /api/v1/users/login,24884,0,0,False,ts-auth-service
+re3-tt,OrderOtherRepository.findByTravelDateAndTrainNumber,24793,0,0,False,ts-order-other-service
+re3-tt,find ts.price_config,22426,0,0,False,ts-price-service
+re3-tt,OrderRepository.findByTravelDateAndTrainNumber,16105,0,0,False,ts-order-service
+re3-tt,PriceConfigRepository.findByRouteIdAndTrainType,14089,0,0,False,ts-price-service
+re3-tt,POST /api/v1/travel2service/trips/left,9430,0,0,False,ts-travel2-service
+re3-tt,GET /api/v1/adminbasicservice/adminbasic/prices,9055,0,0,False,ts-admin-basic-info-service
+re3-tt,GET /api/v1/adminbasicservice/adminbasic/configs,9053,0,0,False,ts-admin-basic-info-service
+re3-tt,GET /api/v1/admintravelservice/admintravel,9046,0,0,False,ts-admin-travel-service
+re3-tt,getMore ts.orders,8762,0,0,False,ts-order-other-service|ts-order-service
+re3-tt,UserController.getToken,8557,0,0,False,ts-auth-service
+re3-tt,ConfigRepository.findAll,8338,0,0,False,ts-config-service
+re3-tt,PriceConfigRepository.findAll,8337,0,0,False,ts-price-service
+re3-tt,POST /api/v1/travelservice/trips/left,2713,0,0,False,ts-travel-service
+re3-tt,GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId},2564,0,0,False,ts-food-service
+re3-tt,TrainFoodRepository.findByTripId,2418,0,0,False,ts-food-map-service
+re3-tt,find ts.trainfoods,2418,0,0,False,ts-food-map-service
+re3-tt,FoodStoreRepository.findByStationIdIn,2366,0,0,False,ts-food-map-service
+re3-tt,find ts.stores,2366,0,0,False,ts-food-map-service
+re3-tt,OrderRepository.findByAccountId,1946,0,0,False,ts-order-service
+re3-tt,OrderOtherRepository.findByAccountId,1580,0,0,False,ts-order-other-service
+re3-tt,SecurityRepository.findByName,1366,0,0,False,ts-security-service
+re3-tt,find ts.security_config,1366,0,0,False,ts-security-service
+re3-tt,find ts.contacts,1365,0,0,False,ts-contacts-service
+re3-tt,update ts.orders,1027,0,0,False,ts-order-other-service|ts-order-service
+re3-tt,POST /api/v1/orderservice/order/refresh,962,0,0,False,ts-order-service
+re3-tt,GET /api/v1/assuranceservice/assurances/types,831,0,0,False,ts-assurance-service
+re3-tt,POST /api/v1/inside_pay_service/inside_payment,747,0,0,False,ts-inside-payment-service
+re3-tt,ConsignPriceConfigRepository.findByIndex,732,0,0,False,ts-consign-price-service
+re3-tt,ConsignRepository.save,732,0,0,False,ts-consign-service
+re3-tt,find ts.consign_price,732,0,0,False,ts-consign-price-service
+re3-tt,update ts.consign_record,732,0,0,False,ts-consign-service
+re3-tt,ConsignRepository.findById,731,0,0,False,ts-consign-service
+re3-tt,find ts.consign_record,731,0,0,False,ts-consign-service
+re3-tt,PUT /api/v1/consignservice/consigns,730,0,0,False,ts-consign-service
+re3-tt,PaymentRepository.save,688,0,0,False,ts-inside-payment-service|ts-payment-service
+re3-tt,update ts.payment,688,0,0,False,ts-inside-payment-service|ts-payment-service
+re3-tt,find ts.payment,687,0,0,False,ts-inside-payment-service|ts-payment-service
+re3-tt,ContactsRepository.findById,683,0,0,False,ts-contacts-service
+re3-tt,UserRepository.findByUserId,683,0,0,False,ts-user-service
+re3-tt,find ts-user-mongo.user,683,0,0,False,ts-user-service
+re3-tt,ContactsRepository.findByAccountId,682,0,0,False,ts-contacts-service
+re3-tt,GET /api/v1/contactservice/contacts/account/{accountId},682,0,0,False,ts-contacts-service
+re3-tt,POST /api/v1/orderOtherService/orderOther/refresh,665,0,0,False,ts-order-other-service
+re3-tt,OrderRepository.findById,662,0,0,False,ts-order-service
+re3-tt,OrderRepository.save,601,0,0,False,ts-order-service
+re3-tt,OrderOtherRepository.findById,429,0,0,False,ts-order-other-service
+re3-tt,OrderOtherRepository.save,426,0,0,False,ts-order-other-service
+re3-tt,POST /api/v1/preserveservice/preserve,388,0,0,False,ts-preserve-service
+re3-tt,PaymentRepository.findByOrderId,344,0,0,False,ts-payment-service
+re3-tt,AddMoneyRepository.findByUserId,343,0,0,False,ts-inside-payment-service
+re3-tt,FoodOrderRepository.findByOrderId,343,0,0,False,ts-food-service
+re3-tt,FoodOrderRepository.save,343,0,0,False,ts-food-service
+re3-tt,PaymentRepository.findByUserId,343,0,0,False,ts-inside-payment-service
+re3-tt,find ts.addMoney,343,0,0,False,ts-inside-payment-service
+re3-tt,find ts.foodorder,343,0,0,False,ts-food-service
+re3-tt,update ts.foodorder,343,0,0,False,ts-food-service
+re3-tt,AssuranceRepository.findByOrderId,333,0,0,False,ts-assurance-service
+re3-tt,AssuranceRepository.save,333,0,0,False,ts-assurance-service
+re3-tt,find ts.assurance,333,0,0,False,ts-assurance-service
+re3-tt,update ts.assurance,333,0,0,False,ts-assurance-service
+re3-tt,POST /api/v1/preserveotherservice/preserveOther,294,0,0,False,ts-preserve-other-service
+re3-tt,OnCommittedResponseWrapper.sendError,224,0,0,False,ts-admin-travel-service|ts-assurance-service|ts-contacts-service
+re3-tt,RouteRepository.save,150,0,0,False,ts-route-service
+re3-tt,update ts.routes,150,0,0,False,ts-route-service
+re3-tt,getMore ts.payment,147,0,0,False,ts-inside-payment-service
+re3-tt,GET /api/v1/contactservice/contacts/{id}/,11,0,0,False,ts-contacts-service
+re3-tt,GET /api/v1/routeservice/routes/{routeId},176083,176081,0,True,ts-route-service
+re3-tt,GET /api/v1/stationservice/stations/id/{stationNameForId},152555,152555,0,True,ts-station-service
+re3-tt,GET /api/v1/trainservice/trains/{id},133851,133849,0,True,ts-train-service
+re3-tt,GET /api/v1/basicservice/basic/{stationName},90098,90097,0,True,ts-basic-service
+re3-tt,GET /api/v1/ticketinfoservice/ticketinfo/{name},90097,90097,0,True,ts-ticketinfo-service
+re3-tt,POST /api/v1/seatservice/seats/left_tickets,26810,26810,0,True,ts-seat-service
+re3-tt,GET /api/v1/configservice/configs/{configName},26808,26808,0,True,ts-config-service
+re3-tt,GET /api/v1/travel2service/routes/{tripId},16626,16626,0,True,ts-travel2-service
+re3-tt,POST /api/v1/orderOtherService/orderOther/tickets,16626,16626,0,True,ts-order-other-service
+re3-tt,GET /api/v1/travel2service/train_types/{tripId},16625,16625,0,True,ts-travel2-service
+re3-tt,POST /api/v1/basicservice/basic/travel,14091,14090,0,True,ts-basic-service
+re3-tt,POST /api/v1/ticketinfoservice/ticketinfo,14090,14090,0,True,ts-ticketinfo-service
+re3-tt,GET /api/v1/priceservice/prices/{routeId}/{trainType},14089,14089,0,True,ts-price-service
+re3-tt,GET /api/v1/travelservice/routes/{tripId},13285,13285,0,True,ts-travel-service
+re3-tt,GET /api/v1/travelservice/train_types/{tripId},10866,10866,0,True,ts-travel-service
+re3-tt,POST /api/v1/orderservice/order/tickets,10866,10866,0,True,ts-order-service
+re3-tt,GET /api/v1/configservice/configs,8338,8338,0,True,ts-config-service
+re3-tt,GET /api/v1/priceservice/prices,8337,8337,0,True,ts-price-service
+re3-tt,GET /api/v1/orderOtherService/orderOther/{travelDate}/{trainNumber},8167,8167,0,True,ts-order-other-service
+re3-tt,GET /api/v1/travelservice/admin_trip,8128,8128,0,True,ts-travel-service
+re3-tt,GET /api/v1/travel2service/admin_trip,7887,7887,0,True,ts-travel2-service
+re3-tt,GET /api/v1/orderservice/order/{travelDate}/{trainNumber},5239,5239,0,True,ts-order-service
+re3-tt,GET /api/v1/foodmapservice/trainfoods/{tripId},2416,2416,0,True,ts-food-map-service
+re3-tt,POST /api/v1/foodmapservice/foodstores,2366,2366,0,True,ts-food-map-service
+re3-tt,POST /api/v1/stationservice/stations/namelist,1477,1477,0,True,ts-station-service
+re3-tt,GET /api/v1/consignpriceservice/consignprice/{weight}/{isWithinRegion},731,731,0,True,ts-consign-price-service
+re3-tt,GET /api/v1/contactservice/contacts/{id},683,683,0,True,ts-contacts-service
+re3-tt,GET /api/v1/orderOtherService/orderOther/security/{checkDate}/{accountId},683,683,0,True,ts-order-other-service
+re3-tt,GET /api/v1/orderservice/order/security/{checkDate}/{accountId},683,683,0,True,ts-order-service
+re3-tt,GET /api/v1/userservice/users/id/{userId},683,683,0,True,ts-user-service
+re3-tt,POST /api/v1/seatservice/seats,683,683,0,True,ts-seat-service
+re3-tt,GET /api/v1/securityservice/securityConfigs/{accountId},682,682,0,True,ts-security-service
+re3-tt,GET /api/v1/orderservice/order/{orderId},450,450,0,True,ts-order-service
+re3-tt,POST /api/v1/orderservice/order,389,389,0,True,ts-order-service
+re3-tt,POST /api/v1/travelservice/trip_detail,389,389,0,True,ts-travel-service
+re3-tt,POST /api/v1/foodservice/orders,343,343,0,True,ts-food-service
+re3-tt,POST /api/v1/paymentservice/payment,343,343,0,True,ts-payment-service
+re3-tt,GET /api/v1/assuranceservice/assurances/{typeIndex}/{orderId},333,333,0,True,ts-assurance-service
+re3-tt,GET /api/v1/orderOtherService/orderOther/{orderId},297,297,0,True,ts-order-other-service
+re3-tt,POST /api/v1/orderOtherService/orderOther,294,294,0,True,ts-order-other-service
+re3-tt,POST /api/v1/travel2service/trip_detail,294,294,0,True,ts-travel2-service
+re3-tt,GET /api/v1/orderservice/order/status/{orderId}/{status},212,212,0,True,ts-order-service
+re3-tt,GET /api/v1/orderOtherService/orderOther/status/{orderId}/{status},132,132,0,True,ts-order-other-service
