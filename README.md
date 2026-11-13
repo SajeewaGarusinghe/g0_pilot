@@ -1,6 +1,19 @@
 # g0_pilot
 
-G0 pilot for the MSc project *Verifying Telemetry Before Trusting It: Protecting LLM Root Cause Analysis Agents from Fake Evidence in Microservices* (proposal v6, build order guide phase P0, step 9).
+Code for phase **P0** of the MSc project *Verifying Telemetry Before Trusting It: Protecting LLM Root Cause Analysis Agents from Fake Evidence in Microservices*. Two things live here:
+
+| | Build-guide step | Where | State |
+|---|---|---|---|
+| **The G0 pilot** — the attack measured end to end with a real LLM agent | P0 step 9 (G0 **stage 1**) | this README, `g0_pilot.py`, `run_pilot.sh` | run 12 Nov 2026 |
+| **The G0 stage 2 evidence** — can the rules be applied to this data at all? | P0 steps 1–8 (G0 **stage 2**) | **[`stage2/`](stage2/README.md)** | steps 1–8 run 13 Nov 2026 |
+
+Start at [`stage2/README.md`](stage2/README.md) for the stage 2 work: what each script does, how to re-run it, the role tiers, and why ε is never fitted. The project's knowledge base, including what every result means and what comes next, is the separate [`Msc-project`](https://github.com/SajeewaGarusinghe/Msc-project) repo — read its `STATUS.md` first.
+
+**Data hygiene applies to everything here.** Only the 36 RE2-OB development cases named in `dev_cases.json` and RE3-TT may be read. The stage 2 scripts enforce this in code, before any file is opened, and log a SHA-256 of every file they do open.
+
+---
+
+## The G0 pilot (stage 1)
 
 It runs RCAEval's reference LLM agent (no defence, arm D0) on the 36 RE2-OB development cases. Each case is run four times: clean, and with three kinds of forged evidence about one innocent service (the *target*):
 
