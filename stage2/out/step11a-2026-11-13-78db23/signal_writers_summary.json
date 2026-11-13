@@ -1,0 +1,25 @@
+{
+  "dataset": "RE2-OB development cases only",
+  "cases": 36,
+  "generated_utc": "2026-11-13T18:38:52Z",
+  "families_writer_resolved": 8,
+  "families_series_resolved": 7,
+  "families_total": 8,
+  "families_without_resolved_writer": [],
+  "families_with_several_candidate_series": {
+    "mem": "container-memory-usage-bytes|container-memory-working-set-bytes"
+  },
+  "sidecar_written_families": [
+    "error",
+    "latency-50",
+    "latency-90",
+    "workload"
+  ],
+  "platform_written_families": [
+    "cpu",
+    "diskio",
+    "mem",
+    "socket"
+  ],
+  "files_read": 72
+}
