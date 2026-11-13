@@ -1,0 +1,108 @@
+{
+  "dataset": "RE3-OB",
+  "source": "https://zenodo.org/records/14590730/files/RE3-OB.zip",
+  "zenodo_record": "14590730",
+  "accessed_utc": "2026-11-13T18:30:08Z",
+  "file_size_bytes": 190838064,
+  "bytes_transferred": 65536,
+  "share_of_file_transferred": 0.00034341,
+  "index_entries": 251,
+  "root_cause_services": [
+    "adservice",
+    "cartservice",
+    "currencyservice",
+    "emailservice"
+  ],
+  "n_root_cause_services": 4,
+  "fault_types": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5"
+  ],
+  "n_fault_types": 5,
+  "templates": [
+    "adservice_f3",
+    "adservice_f4",
+    "adservice_f5",
+    "cartservice_f1",
+    "currencyservice_f1",
+    "emailservice_f1",
+    "emailservice_f2",
+    "emailservice_f3",
+    "emailservice_f4",
+    "emailservice_f5"
+  ],
+  "n_templates": 10,
+  "n_cases": 30,
+  "repetitions_per_template": {
+    "adservice_f3": 3,
+    "adservice_f4": 3,
+    "adservice_f5": 3,
+    "cartservice_f1": 3,
+    "currencyservice_f1": 3,
+    "emailservice_f1": 3,
+    "emailservice_f2": 3,
+    "emailservice_f3": 3,
+    "emailservice_f4": 3,
+    "emailservice_f5": 3
+  },
+  "files_per_case": [
+    "inject_time.txt",
+    "logs.csv",
+    "metrics.csv",
+    "metrics.png",
+    "metrics_postprocess.log",
+    "simple_metrics.csv",
+    "traces.csv"
+  ],
+  "zenodo_files": [
+    {
+      "key": "RE1-SS.zip",
+      "size": 79089075,
+      "checksum": "md5:d2b15cbd3bb3cf6ec5f3cc65f7fac225"
+    },
+    {
+      "key": "RE1-OB.zip",
+      "size": 30966778,
+      "checksum": "md5:47cce26ed24140e8974e68f9db2a5e9c"
+    },
+    {
+      "key": "RE1-TT.zip",
+      "size": 279663965,
+      "checksum": "md5:48a26925ce47fd4bcfbedbae4f31475b"
+    },
+    {
+      "key": "RE2-OB.zip",
+      "size": 1191025569,
+      "checksum": "md5:b9e23f8842c404b396ffd2becff15de4"
+    },
+    {
+      "key": "RE2-TT.zip",
+      "size": 2801345134,
+      "checksum": "md5:a7fbcd1ada406067dcc50771ae398408"
+    },
+    {
+      "key": "RE2-SS.zip",
+      "size": 245629018,
+      "checksum": "md5:bd747a8fc7c5be00c613e13fbf9dd74b"
+    },
+    {
+      "key": "RE3-OB.zip",
+      "size": 190838064,
+      "checksum": "md5:96947589084348f9d12cba370313458e"
+    },
+    {
+      "key": "RE3-SS.zip",
+      "size": 101485651,
+      "checksum": "md5:467964eddb2a4fef4d6486c4679e749b"
+    },
+    {
+      "key": "RE3-TT.zip",
+      "size": 241715689,
+      "checksum": "md5:ae1eb5906fb4d13a16a6a5e58faaf30b"
+    }
+  ],
+  "zenodo_title": "RCAEval: A Benchmark for Root Cause Analysis of Microservice Systems"
+}

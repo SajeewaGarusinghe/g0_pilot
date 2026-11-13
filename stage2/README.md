@@ -1,4 +1,4 @@
-# G0 stage 2 — steps 1–7 on the data
+# G0 stage 2 — steps 1–11a on the data
 
 Build-guide `P0` steps 1–3 and 7 for *Verifying Telemetry Before Trusting It*. Steps 1–3 read the
 same `traces.csv` and run as one pass per case; step 7 is a second pass that applies the candidate
@@ -14,6 +14,10 @@ aggregates.
 | `pairs.py` | (shared) | builds the matched client/server pairs; `--check` asserts it reproduces the counts `audit_traces.py` published |
 | `rules_prototype.py` | 7 | applies R1 and R2 to every clean matched pair: ε ladder, violations, slack, forgery headroom |
 | `sources/manifest.py` | 4, 5, 6 | records every upstream file read, with version and SHA-256 |
+| `distinguishability.py` | 9a | distinguishability AUC per family on the pilot's overlays, with the forged-record recovery check |
+| `route_coverage.py` | 11a (A) | collates the published aggregates to one row per (caller, callee, method); opens no case file |
+| `signal_writers.py` | 11a (B) | proves which `metrics.csv` series each `simple_metrics.csv` column **is**, over all 36 dev cases |
+| `re3ob_index.py` | 11a (C) | reads RE3-OB's **case index only** — the zip central directory over HTTP range requests |
 
 **This is a prototype.** P3 rewrites the matcher with unit tests (build guide P0, "Do not
 polish the P0 scripts").
@@ -38,6 +42,19 @@ python stage2/rules_prototype.py --dataset re3-tt     --out stage2/out/step7-<da
 
 # steps 4-6 provenance
 python stage2/sources/manifest.py /home/opc/stage2-sources > stage2/sources/manifest.csv
+
+# step 11a. Item D (the released-code check) is a dated web search, not a script: its
+# queries and date live in released_code_check.csv beside these outputs.
+python stage2/route_coverage.py \
+    --evidence /home/opc/Msc-project/09-results/g0 \
+    --proto /home/opc/stage2-sources/ob-v0.9.0/protos/demo.proto \
+    --out stage2/out/step11a-<date>
+python stage2/signal_writers.py --out stage2/out/step11a-<date>
+python stage2/re3ob_index.py    --out stage2/out/step11a-<date>
+
+# both guards, which must refuse and stop:
+python stage2/signal_writers.py --out /tmp/x --guard-test       # a test template
+python stage2/re3ob_index.py    --out /tmp/x --byte-cap 1024    # too many bytes
 ```
 
 Each pass is about 15 s per RE2-OB case and 5 s per RE3-TT case, serial, one case in memory at a

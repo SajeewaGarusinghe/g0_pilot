@@ -1,0 +1,31 @@
+template,root_cause_service,fault,stratum,inbound_routes,inbound_routes_covered,inbound_methods_covered,inbound_methods_without_witness,covered_by_dev_data
+checkoutservice_cpu,checkoutservice,cpu,development,1,1,PlaceOrder,,True
+checkoutservice_delay,checkoutservice,delay,development,1,1,PlaceOrder,,True
+checkoutservice_disk,checkoutservice,disk,development,1,1,PlaceOrder,,True
+checkoutservice_loss,checkoutservice,loss,development,1,1,PlaceOrder,,True
+checkoutservice_mem,checkoutservice,mem,development,1,1,PlaceOrder,,True
+checkoutservice_socket,checkoutservice,socket,development,1,1,PlaceOrder,,True
+currencyservice_cpu,currencyservice,cpu,development,3,3,Convert|GetSupportedCurrencies,,True
+currencyservice_delay,currencyservice,delay,development,3,3,Convert|GetSupportedCurrencies,,True
+currencyservice_disk,currencyservice,disk,development,3,3,Convert|GetSupportedCurrencies,,True
+currencyservice_loss,currencyservice,loss,development,3,3,Convert|GetSupportedCurrencies,,True
+currencyservice_mem,currencyservice,mem,development,3,3,Convert|GetSupportedCurrencies,,True
+currencyservice_socket,currencyservice,socket,development,3,3,Convert|GetSupportedCurrencies,,True
+emailservice_cpu,emailservice,cpu,S1 (test),1,1,SendOrderConfirmation,,True
+emailservice_delay,emailservice,delay,S1 (test),1,1,SendOrderConfirmation,,True
+emailservice_disk,emailservice,disk,S1 (test),1,1,SendOrderConfirmation,,True
+emailservice_loss,emailservice,loss,S1 (test),1,1,SendOrderConfirmation,,True
+emailservice_mem,emailservice,mem,S1 (test),1,1,SendOrderConfirmation,,True
+emailservice_socket,emailservice,socket,S1 (test),1,1,SendOrderConfirmation,,True
+productcatalogservice_cpu,productcatalogservice,cpu,S1 (test),5,4,GetProduct|ListProducts,,True
+productcatalogservice_delay,productcatalogservice,delay,S1 (test),5,4,GetProduct|ListProducts,,True
+productcatalogservice_disk,productcatalogservice,disk,S1 (test),5,4,GetProduct|ListProducts,,True
+productcatalogservice_loss,productcatalogservice,loss,S1 (test),5,4,GetProduct|ListProducts,,True
+productcatalogservice_mem,productcatalogservice,mem,S1 (test),5,4,GetProduct|ListProducts,,True
+productcatalogservice_socket,productcatalogservice,socket,S1 (test),5,4,GetProduct|ListProducts,,True
+recommendationservice_cpu,recommendationservice,cpu,S1 (test),1,1,ListRecommendations,,True
+recommendationservice_delay,recommendationservice,delay,S1 (test),1,1,ListRecommendations,,True
+recommendationservice_disk,recommendationservice,disk,S1 (test),1,1,ListRecommendations,,True
+recommendationservice_loss,recommendationservice,loss,S1 (test),1,1,ListRecommendations,,True
+recommendationservice_mem,recommendationservice,mem,S1 (test),1,1,ListRecommendations,,True
+recommendationservice_socket,recommendationservice,socket,S1 (test),1,1,ListRecommendations,,True

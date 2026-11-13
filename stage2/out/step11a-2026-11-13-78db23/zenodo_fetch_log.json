@@ -1,0 +1,35 @@
+{
+  "byte_cap": 8388608,
+  "bytes_transferred": 65536,
+  "file_size_bytes": 190838064,
+  "requests": [
+    {
+      "why": "HEAD for the file length",
+      "url": "https://zenodo.org/records/14590730/files/RE3-OB.zip",
+      "range": null,
+      "requested_bytes": 0,
+      "received_bytes": 0,
+      "status": 200,
+      "content_length": 190838064,
+      "accept_ranges": ""
+    },
+    {
+      "why": "the tail, to find the end-of-central-directory record",
+      "url": "https://zenodo.org/records/14590730/files/RE3-OB.zip",
+      "range": "bytes=190772528-190838063",
+      "requested_bytes": 65536,
+      "received_bytes": 65536,
+      "status": 206,
+      "content_range": "bytes 190772528-190838063/190838064",
+      "sha256": "0ba5f43db1e5742298c433d0bfd86cd49726640fb91a9b26a90996ab471bb4e4"
+    },
+    {
+      "why": "the record metadata, to corroborate the file length",
+      "url": "https://zenodo.org/api/records/14590730",
+      "range": null,
+      "requested_bytes": 0,
+      "received_bytes": 0,
+      "status": 200
+    }
+  ]
+}

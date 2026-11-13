@@ -1,0 +1,22 @@
+{
+  "routes_total": 29,
+  "by_verdict": {
+    "covered": 11,
+    "not-an-app-route": 9,
+    "no-witness": 8,
+    "declared-never-observed": 1
+  },
+  "app_routes": 20,
+  "app_routes_covered": 11,
+  "callees_without_any_server_span": [
+    "adservice",
+    "cartservice",
+    "shippingservice"
+  ],
+  "client_spans_no_witness": 1167203,
+  "client_spans_covered": 1975812,
+  "s1_templates_covered": 18,
+  "s1_templates_total": 18,
+  "proto_rpcs_declared": 15,
+  "proto_rpcs_never_observed": 1
+}
