@@ -1,0 +1,7 @@
+family,features,n_forged,n_genuine,n_features,folds,auc_mean,auc_min,auc_max,dropped
+F1,full,16070,16070,7,4,0.9935,0.9767,0.9997,
+F1,ablated,16070,16070,4,4,0.9946,0.9823,0.9994,template|cluster_id|msg_len
+F2,full,64454,64454,10,4,1.0,1.0,1.0,
+F2,ablated,64454,64454,9,4,0.5033,0.4997,0.5054,status_code
+F3,full,64454,64454,10,4,0.9969,0.9938,0.9986,
+F3,ablated,64454,64454,8,4,0.5003,0.4937,0.504,duration_us|log_duration
