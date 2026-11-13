@@ -1,0 +1,8 @@
+dataset,role_tier,client_code,server_code,n,share
+re2-ob-dev,NA_ROLE,0,0,214,3.6e-05
+re2-ob-dev,ROOT_CLIENT,0,0,79192,0.013296
+re2-ob-dev,STRONG,0,0,5876626,0.986651
+re2-ob-dev,STRONG,13,0,3,1e-06
+re2-ob-dev,STRONG,13,13,101,1.7e-05
+re3-tt,NA_ROLE,NaN,NaN,63,7.1e-05
+re3-tt,WEAK_VERB_ONLY,NaN,NaN,884056,0.999929

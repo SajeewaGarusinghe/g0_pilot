@@ -1,0 +1,8 @@
+dataset,code,span_class,is_client_span,n
+re2-ob-dev,13,cross_svc_parent,False,101
+re2-ob-dev,13,same_svc_parent,False,9
+re2-ob-dev,13,same_svc_parent,True,104
+re2-ob-dev,14,root,False,106
+re2-ob-dev,14,same_svc_parent,False,2318
+re2-ob-dev,4,root,False,4
+re2-ob-dev,4,same_svc_parent,False,43
