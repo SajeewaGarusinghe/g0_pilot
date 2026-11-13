@@ -229,8 +229,14 @@ def audit_case(dataset, case_id, case_dir, template, out_dir, allowed):
 
     sid = df["spanID"].astype(str)
     svc = df["serviceName"].astype(str)
-    meth = df["methodName"].astype(str) if "methodName" in df else pd.Series([""] * n)
-    op = df["operationName"].astype(str) if "operationName" in df else pd.Series([""] * n)
+    # NOTE: .astype(str) on pandas' nullable string dtype keeps NA rather than producing
+    # "nan", and groupby drops NA keys, so a census keyed on these columns would silently
+    # lose every non-RPC span (the frontend's own HTTP spans; every Train Ticket span).
+    # Normalise missing to the empty string, which empty() already treats as absent.
+    meth = (df["methodName"].astype("string").fillna("")
+            if "methodName" in df else pd.Series([""] * n, dtype="string"))
+    op = (df["operationName"].astype("string").fillna("")
+          if "operationName" in df else pd.Series([""] * n, dtype="string"))
     pid = df["parentSpanID"].astype(str) if "parentSpanID" in df else pd.Series(["nan"] * n)
 
     svc_map = dict(zip(sid, svc))
@@ -293,7 +299,7 @@ def audit_case(dataset, case_id, case_dir, template, out_dir, allowed):
                                             "serviceName": s, "methodName": m,
                                             "operationName": o, "n": int(cnt)})
 
-    forms = op.map(op_form)
+    forms = op.map(op_form).fillna("missing")
     for (s, fm), cnt in pd.DataFrame({"s": svc, "f": forms}).groupby(["s", "f"]).size().items():
         emit(out_dir, "operation_forms.csv", {"dataset": dataset, "case_id": case_id,
                                               "serviceName": s, "op_form": fm, "n": int(cnt)})

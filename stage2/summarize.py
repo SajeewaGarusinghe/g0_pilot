@@ -21,6 +21,25 @@ def load(out, name, **kw):
     return pd.read_csv(p, **kw) if os.path.exists(p) else pd.DataFrame()
 
 
+def named(smo, ds, col):
+    """Per-case min-max of the number of distinct NON-EMPTY values of col, from the census."""
+    if smo.empty:
+        return ""
+    g = smo[(smo.dataset == ds) & (smo[col].fillna("").astype(str) != "")]
+    if g.empty:
+        return "0-0"
+    n = g.groupby("case_id")[col].nunique()
+    return f"{int(n.min())}-{int(n.max())}"
+
+
+def without(smo, ds, col):
+    """Total spans in ds whose col is empty."""
+    if smo.empty:
+        return ""
+    g = smo[(smo.dataset == ds) & (smo[col].fillna("").astype(str) == "")]
+    return int(g.n.sum())
+
+
 def spread(series):
     """min / median / max of a per-case series, as a compact string."""
     if series.empty:
@@ -37,6 +56,7 @@ def main():
     os.makedirs(agg, exist_ok=True)
 
     cases = load(out, "schema_cases.csv")
+    smo = load(out, "svc_method_op.csv", keep_default_na=False)
     part = load(out, "span_partition.csv")
     cov = load(out, "role_coverage.csv")
     reasons = load(out, "role_reasons.csv")
@@ -47,7 +67,6 @@ def main():
     mism = load(out, "op_mismatch_taxonomy.csv")
     nochild = load(out, "client_spans_without_server_child.csv")
     reads = load(out, "read_log.csv")
-    smo = load(out, "svc_method_op.csv")
 
     # ---------------- step 1: schema, per data set ----------------
     rows = []
@@ -60,8 +79,11 @@ def main():
             "spans_per_case_min_med_max": f"{int(g.n_rows.min())} / {int(g.n_rows.median())} / {int(g.n_rows.max())}",
             "traces_total": int(g.n_traces.sum()),
             "services_min_max": f"{int(g.n_services.min())}-{int(g.n_services.max())}",
-            "methods_min_max": f"{int(g.n_methods.min())}-{int(g.n_methods.max())}",
-            "operations_min_max": f"{int(g.n_operations.min())}-{int(g.n_operations.max())}",
+            # n_methods/n_operations in schema_cases.csv count the absent case ("") as a value;
+            # report named methods and operations instead, plus how many spans carry no method.
+            "named_methods_min_max": named(smo, ds, "methodName"),
+            "named_operations_min_max": named(smo, ds, "operationName"),
+            "spans_without_methodName": without(smo, ds, "methodName"),
             "duplicate_span_ids": int(g.dup_span_ids.sum()),
             "service_name_with_underscore": "|".join(sorted({x for x in g.svc_name_with_underscore.dropna().astype(str) if x})) or "none",
             "missing_expected_cols": "|".join(sorted({x for x in g.missing_expected_cols.dropna().astype(str) if x})) or "none",
@@ -164,6 +186,11 @@ def main():
             os.path.join(agg, "pooled_client_spans_without_server_child.csv"), index=False)
 
     if not smo.empty:
+        # methodName is null for every span that is not an RPC (the frontend's own HTTP server
+        # spans on Online Boutique; every Train Ticket span). pandas' groupby drops null keys,
+        # so fill them before grouping or those rows vanish from the census.
+        for col in ("serviceName", "methodName", "operationName"):
+            smo[col] = smo[col].fillna("")
         s = smo.groupby(["dataset", "serviceName", "methodName", "operationName"])["n"].sum().reset_index()
         s.to_csv(os.path.join(agg, "pooled_svc_method_op.csv"), index=False)
     cal = load(out, "call_role_census.csv")
