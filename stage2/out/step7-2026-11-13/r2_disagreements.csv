@@ -1,0 +1,4 @@
+dataset,case_id,traceID,client_service,server_service,call,role_tier,client_code,server_code,client_duration_us,server_duration_us,slack_us,client_span,server_span
+re2-ob-dev,re2-ob-0047,5e0ca9bf4f10ad489414993568cbe83b,frontendservice,currencyservice,Convert,STRONG,13,0,911190,250,910940,585979e4fa8c02d0,6d773bbd4e419827
+re2-ob-dev,re2-ob-0047,d51e7fb3cc0560c14244e425adc808e3,frontendservice,currencyservice,Convert,STRONG,13,0,911341,245,911096,21d80b51e1197620,ab20a910588a497b
+re2-ob-dev,re2-ob-0047,81a285938ff7b6fe8a5f4c3f62a2de8a,frontendservice,currencyservice,Convert,STRONG,13,0,911193,190,911003,1023e22504e9d5e7,48c8ab7676b588cd
