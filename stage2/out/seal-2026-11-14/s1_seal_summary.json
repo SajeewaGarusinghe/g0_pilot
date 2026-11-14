@@ -1,0 +1,30 @@
+{
+  "what": "SHA-256 seal of the exported RE2-OB task directories (known issue K10)",
+  "sealed_utc": "2026-11-14T09:41:49Z",
+  "export_root": "agent_tasks/re2-ob",
+  "cases": 90,
+  "cases_by_stratum": {
+    "development": 36,
+    "S1 (test)": 54
+  },
+  "files_sealed": 810,
+  "bytes_sealed": 8550747172,
+  "export_metadata_files": [
+    {
+      "file": "agent_tasks/re2-ob/manifest.json",
+      "bytes": 2302,
+      "sha256": "69c1a5d07a97fbdccc3d9edab34586deeb604c18be40e39adb27decf54131096"
+    },
+    {
+      "file": "agent_tasks/re2-ob.answers.jsonl",
+      "bytes": 25044,
+      "sha256": "9ccb21e73c0ee5329254cad3c001eaf535205574effa2ea290251cdf86fcc814"
+    }
+  ],
+  "root_sha256": "f0ab102379576a38cb9787c32e04f590451e7d728431b619bf7f7b07cddc0d35",
+  "sealed_by": "Claude Opus 5 in Claude Code, at the owner's instruction on 2026-11-14",
+  "command": "python stage2/seal_s1_export.py --out stage2/out/seal-2026-11-14",
+  "repo_commit": "fdf9662e9c01421642033b8d042fd454c46abf44",
+  "python": "3.12.16",
+  "note": "Only file bytes were read, to hash them. No case file was parsed, printed or summarised, and no value from any S1 case informed any design decision. Each case's hash covers its file names as well as their contents, so a removed or renamed file changes it."
+}
