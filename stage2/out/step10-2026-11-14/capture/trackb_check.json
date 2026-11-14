@@ -1,0 +1,96 @@
+{
+  "otlp": {
+    "requests": 85,
+    "spans": 24298,
+    "services": {
+      "emailservice": 204,
+      "currencyservice": 3411,
+      "frontendservice": 12122,
+      "productcatalogservice": 6105,
+      "checkoutservice": 626,
+      "paymentservice": 118,
+      "recommendationservice": 1712
+    },
+    "attribute_keys": {
+      "rpc.system": 23132,
+      "rpc.grpc.status_code": 23132,
+      "rpc.method": 23132,
+      "rpc.service": 23132,
+      "net.peer.port": 12692,
+      "net.peer.name": 11548,
+      "net.sock.peer.addr": 7305,
+      "net.sock.peer.port": 7305,
+      "http.method": 1166,
+      "http.scheme": 1166,
+      "http.flavor": 1166,
+      "net.host.name": 1166,
+      "http.user_agent": 1166,
+      "http.status_code": 1166,
+      "rpc.user_agent": 1144,
+      "net.peer.ip": 1144,
+      "http.wrote_bytes": 970,
+      "http.read_bytes": 230,
+      "net.host.port": 84
+    },
+    "status_values": {
+      "rpc.grpc.status_code=0": 23132
+    }
+  },
+  "converted": {
+    "rows": 24298,
+    "columns": [
+      "time",
+      "traceID",
+      "spanID",
+      "serviceName",
+      "methodName",
+      "operationName",
+      "startTimeMillis",
+      "startTime",
+      "duration",
+      "statusCode",
+      "parentSpanID"
+    ],
+    "distinct_traces": 2229,
+    "distinct_spans": 24298,
+    "duplicate_span_ids": 0,
+    "services": [
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontendservice",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice"
+    ],
+    "service_names_with_underscore": [],
+    "statusCode_distribution": {
+      "0": 24298
+    },
+    "op_tier_census": {
+      "exact": 5157,
+      "norm_equal": 4909
+    },
+    "orphans": 2303,
+    "same_service_edges": 11929,
+    "cross_service_edges": 10066,
+    "partition_sums_to_rows": true,
+    "role_named": 10066,
+    "role_strong": 9928,
+    "role_named_share": 1.0,
+    "amb_non_1to1": 0,
+    "matched_pairs": 10066,
+    "r1_violations_eps0": 0,
+    "r1_slack_min_us": 334,
+    "r1_slack_median_us": 838,
+    "paired_code_census": {
+      "client=0/server=0": 10066
+    }
+  },
+  "verdict": {
+    "k18_convention_emitted": "rpc.grpc.status_code",
+    "schema_matches_rcaeval": true,
+    "roles_inferable": true,
+    "r1_has_clean_violations": false
+  }
+}

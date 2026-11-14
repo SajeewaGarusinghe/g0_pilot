@@ -1,0 +1,4 @@
+NAME                  STATUS   ROLES                  AGE     VERSION        INTERNAL-IP   EXTERNAL-IP   OS-IMAGE           KERNEL-VERSION                   CONTAINER-RUNTIME
+k3d-trackb-agent-0    Ready    <none>                 8m39s   v1.30.6+k3s1   172.18.0.3    <none>        K3s v1.30.6+k3s1   6.12.0-208.112.5.el9uek.x86_64   containerd://1.7.22-k3s1
+k3d-trackb-agent-1    Ready    <none>                 8m39s   v1.30.6+k3s1   172.18.0.4    <none>        K3s v1.30.6+k3s1   6.12.0-208.112.5.el9uek.x86_64   containerd://1.7.22-k3s1
+k3d-trackb-server-0   Ready    control-plane,master   8m44s   v1.30.6+k3s1   172.18.0.2    <none>        K3s v1.30.6+k3s1   6.12.0-208.112.5.el9uek.x86_64   containerd://1.7.22-k3s1
