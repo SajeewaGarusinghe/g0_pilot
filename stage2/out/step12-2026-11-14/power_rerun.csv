@@ -1,0 +1,76 @@
+structure,clusters,cases,hypothesis,parameter,sd_between,alpha,power
+measured (12 clusters),12,174,size check,exact null,,0.05,0.044
+measured (12 clusters),12,174,H1 (blame above clean),effect 0.05,0.06,0.0125,0.227
+measured (12 clusters),12,174,H1 (blame above clean),effect 0.1,0.06,0.0125,0.723
+measured (12 clusters),12,174,H1 (blame above clean),effect 0.15,0.06,0.0125,0.936
+measured (12 clusters),12,174,H1 (blame above clean),effect 0.2,0.06,0.0125,0.987
+measured (12 clusters),12,174,H1 (blame above clean),effect 0.25,0.06,0.0125,0.997
+measured (12 clusters),12,174,H1 (blame above clean),effect 0.3,0.06,0.0125,1.0
+measured (12 clusters),12,174,H1 (blame above clean),effect 0.05,0.12,0.0125,0.234
+measured (12 clusters),12,174,H1 (blame above clean),effect 0.1,0.12,0.0125,0.527
+measured (12 clusters),12,174,H1 (blame above clean),effect 0.15,0.12,0.0125,0.786
+measured (12 clusters),12,174,H1 (blame above clean),effect 0.2,0.12,0.0125,0.946
+measured (12 clusters),12,174,H1 (blame above clean),effect 0.25,0.12,0.0125,0.989
+measured (12 clusters),12,174,H1 (blame above clean),effect 0.3,0.12,0.0125,1.0
+measured (12 clusters),12,174,H2b (defence reduces the effect),"effect 0.1, rescued 0.25",0.08,0.0125,0.1175
+measured (12 clusters),12,174,H2b (defence reduces the effect),"effect 0.1, rescued 0.5",0.08,0.0125,0.48125
+measured (12 clusters),12,174,H2b (defence reduces the effect),"effect 0.1, rescued 0.75",0.08,0.0125,0.71625
+measured (12 clusters),12,174,H2b (defence reduces the effect),"effect 0.1, rescued 1.0",0.08,0.0125,0.83375
+measured (12 clusters),12,174,H2b (defence reduces the effect),"effect 0.2, rescued 0.25",0.08,0.0125,0.525
+measured (12 clusters),12,174,H2b (defence reduces the effect),"effect 0.2, rescued 0.5",0.08,0.0125,0.91875
+measured (12 clusters),12,174,H2b (defence reduces the effect),"effect 0.2, rescued 0.75",0.08,0.0125,0.98375
+measured (12 clusters),12,174,H2b (defence reduces the effect),"effect 0.2, rescued 1.0",0.08,0.0125,1.0
+measured (12 clusters),12,174,H2b (defence reduces the effect),"effect 0.3, rescued 0.25",0.08,0.0125,0.83875
+measured (12 clusters),12,174,H2b (defence reduces the effect),"effect 0.3, rescued 0.5",0.08,0.0125,0.99375
+measured (12 clusters),12,174,H2b (defence reduces the effect),"effect 0.3, rescued 0.75",0.08,0.0125,1.0
+measured (12 clusters),12,174,H2b (defence reduces the effect),"effect 0.3, rescued 1.0",0.08,0.0125,1.0
+pilot assumption (13 clusters),13,174,size check,exact null,,0.05,0.0515
+pilot assumption (13 clusters),13,174,H1 (blame above clean),effect 0.05,0.06,0.0125,0.333
+pilot assumption (13 clusters),13,174,H1 (blame above clean),effect 0.1,0.06,0.0125,0.783
+pilot assumption (13 clusters),13,174,H1 (blame above clean),effect 0.15,0.06,0.0125,0.965
+pilot assumption (13 clusters),13,174,H1 (blame above clean),effect 0.2,0.06,0.0125,0.998
+pilot assumption (13 clusters),13,174,H1 (blame above clean),effect 0.25,0.06,0.0125,1.0
+pilot assumption (13 clusters),13,174,H1 (blame above clean),effect 0.3,0.06,0.0125,1.0
+pilot assumption (13 clusters),13,174,H1 (blame above clean),effect 0.05,0.12,0.0125,0.3
+pilot assumption (13 clusters),13,174,H1 (blame above clean),effect 0.1,0.12,0.0125,0.612
+pilot assumption (13 clusters),13,174,H1 (blame above clean),effect 0.15,0.12,0.0125,0.862
+pilot assumption (13 clusters),13,174,H1 (blame above clean),effect 0.2,0.12,0.0125,0.975
+pilot assumption (13 clusters),13,174,H1 (blame above clean),effect 0.25,0.12,0.0125,0.999
+pilot assumption (13 clusters),13,174,H1 (blame above clean),effect 0.3,0.12,0.0125,1.0
+pilot assumption (13 clusters),13,174,H2b (defence reduces the effect),"effect 0.1, rescued 0.25",0.08,0.0125,0.16
+pilot assumption (13 clusters),13,174,H2b (defence reduces the effect),"effect 0.1, rescued 0.5",0.08,0.0125,0.58375
+pilot assumption (13 clusters),13,174,H2b (defence reduces the effect),"effect 0.1, rescued 0.75",0.08,0.0125,0.815
+pilot assumption (13 clusters),13,174,H2b (defence reduces the effect),"effect 0.1, rescued 1.0",0.08,0.0125,0.93
+pilot assumption (13 clusters),13,174,H2b (defence reduces the effect),"effect 0.2, rescued 0.25",0.08,0.0125,0.66125
+pilot assumption (13 clusters),13,174,H2b (defence reduces the effect),"effect 0.2, rescued 0.5",0.08,0.0125,0.9625
+pilot assumption (13 clusters),13,174,H2b (defence reduces the effect),"effect 0.2, rescued 0.75",0.08,0.0125,0.995
+pilot assumption (13 clusters),13,174,H2b (defence reduces the effect),"effect 0.2, rescued 1.0",0.08,0.0125,1.0
+pilot assumption (13 clusters),13,174,H2b (defence reduces the effect),"effect 0.3, rescued 0.25",0.08,0.0125,0.91375
+pilot assumption (13 clusters),13,174,H2b (defence reduces the effect),"effect 0.3, rescued 0.5",0.08,0.0125,0.99875
+pilot assumption (13 clusters),13,174,H2b (defence reduces the effect),"effect 0.3, rescued 0.75",0.08,0.0125,1.0
+pilot assumption (13 clusters),13,174,H2b (defence reduces the effect),"effect 0.3, rescued 1.0",0.08,0.0125,1.0
+Online Boutique strata only (7 clusters),7,84,size check,exact null,,0.05,0.026
+Online Boutique strata only (7 clusters),7,84,H1 (blame above clean),effect 0.05,0.06,0.0125,0.029
+Online Boutique strata only (7 clusters),7,84,H1 (blame above clean),effect 0.1,0.06,0.0125,0.17
+Online Boutique strata only (7 clusters),7,84,H1 (blame above clean),effect 0.15,0.06,0.0125,0.403
+Online Boutique strata only (7 clusters),7,84,H1 (blame above clean),effect 0.2,0.06,0.0125,0.66
+Online Boutique strata only (7 clusters),7,84,H1 (blame above clean),effect 0.25,0.06,0.0125,0.834
+Online Boutique strata only (7 clusters),7,84,H1 (blame above clean),effect 0.3,0.06,0.0125,0.915
+Online Boutique strata only (7 clusters),7,84,H1 (blame above clean),effect 0.05,0.12,0.0125,0.028
+Online Boutique strata only (7 clusters),7,84,H1 (blame above clean),effect 0.1,0.12,0.0125,0.105
+Online Boutique strata only (7 clusters),7,84,H1 (blame above clean),effect 0.15,0.12,0.0125,0.258
+Online Boutique strata only (7 clusters),7,84,H1 (blame above clean),effect 0.2,0.12,0.0125,0.463
+Online Boutique strata only (7 clusters),7,84,H1 (blame above clean),effect 0.25,0.12,0.0125,0.655
+Online Boutique strata only (7 clusters),7,84,H1 (blame above clean),effect 0.3,0.12,0.0125,0.81
+Online Boutique strata only (7 clusters),7,84,H2b (defence reduces the effect),"effect 0.1, rescued 0.25",0.08,0.0125,0.015
+Online Boutique strata only (7 clusters),7,84,H2b (defence reduces the effect),"effect 0.1, rescued 0.5",0.08,0.0125,0.0725
+Online Boutique strata only (7 clusters),7,84,H2b (defence reduces the effect),"effect 0.1, rescued 0.75",0.08,0.0125,0.11
+Online Boutique strata only (7 clusters),7,84,H2b (defence reduces the effect),"effect 0.1, rescued 1.0",0.08,0.0125,0.18875
+Online Boutique strata only (7 clusters),7,84,H2b (defence reduces the effect),"effect 0.2, rescued 0.25",0.08,0.0125,0.07
+Online Boutique strata only (7 clusters),7,84,H2b (defence reduces the effect),"effect 0.2, rescued 0.5",0.08,0.0125,0.28875
+Online Boutique strata only (7 clusters),7,84,H2b (defence reduces the effect),"effect 0.2, rescued 0.75",0.08,0.0125,0.50125
+Online Boutique strata only (7 clusters),7,84,H2b (defence reduces the effect),"effect 0.2, rescued 1.0",0.08,0.0125,0.6725
+Online Boutique strata only (7 clusters),7,84,H2b (defence reduces the effect),"effect 0.3, rescued 0.25",0.08,0.0125,0.18125
+Online Boutique strata only (7 clusters),7,84,H2b (defence reduces the effect),"effect 0.3, rescued 0.5",0.08,0.0125,0.57875
+Online Boutique strata only (7 clusters),7,84,H2b (defence reduces the effect),"effect 0.3, rescued 0.75",0.08,0.0125,0.8175
+Online Boutique strata only (7 clusters),7,84,H2b (defence reduces the effect),"effect 0.3, rescued 1.0",0.08,0.0125,0.92375

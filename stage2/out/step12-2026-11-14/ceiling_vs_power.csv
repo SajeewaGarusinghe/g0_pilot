@@ -1,0 +1,5 @@
+family,coverage_ceiling,max_rescued_share_reachable,best_power_at_effect_0.20,meets_g3_condition_0.70
+FS (status and duration),1.0,1.0,0.6725,False
+F2 (status only),1.0,1.0,0.6725,False
+"F3, sibling target",0.4984,0.25,0.07,False
+"F3, callee target",0.0055,0.0,0.0,False
