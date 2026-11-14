@@ -40,6 +40,13 @@ STRATA_PILOT = {"S1": [18, 18, 18], "S2": [18, 18, 18, 18, 18], "S3": [6, 6, 6, 
 # (NA_BOUNDARY, NA_STATUS_LOSSY), so a confirmatory test of a rule-dependent hypothesis can only
 # use S1 and S3: 7 clusters and 84 of the 174 cases, not 12 and 174.
 STRATA_OB_ONLY = {"S1": [18, 18, 18], "S3": [15, 9, 3, 3]}
+# The 7 clusters above are only 6 distinct services: `emailservice` is an S1 root cause *and*
+# S3's largest, so treating the two as independent is a dependence the wild bootstrap-t does not
+# model, and dependence biases it anti-conservatively -- the opposite direction to the 0.026 size
+# the 7-cluster run reports. Merging them gives the honest floor: one cluster of 18 + 15 = 33
+# cases, then productcatalogservice 18, recommendationservice 18, adservice 9, cartservice 3,
+# currencyservice 3. Equal weight per cluster, 84 cases, 6 clusters.
+STRATA_MERGED = {"S1+S3, emailservice merged": [33, 18, 18, 9, 3, 3]}
 
 # step 8's rule-coverage ceiling: the share of forged records a rule can reach at all
 CEILING = {"FS (status and duration)": 1.0, "F2 (status only)": 1.0,
@@ -118,7 +125,8 @@ def main():
     rows = []
     for label, strata in (("measured (12 clusters)", STRATA_MEASURED),
                           ("pilot assumption (13 clusters)", STRATA_PILOT),
-                          ("Online Boutique strata only (7 clusters)", STRATA_OB_ONLY)):
+                          ("Online Boutique strata only (7 clusters)", STRATA_OB_ONLY),
+                          ("OB strata, emailservice merged (6 clusters)", STRATA_MERGED)):
         weights, sizes = layout(strata)
         rng = np.random.default_rng(SEED)
         test = make_test(weights, rng)

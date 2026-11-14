@@ -1,0 +1,32 @@
+template,root_cause_service,fault,stratum,service_in_dev_traces,inbound_routes_observed_in_dev,inbound_matched_pairs_in_dev,inbound_pairs_r1_checked_in_dev,inbound_routes
+.DS_Store,.DS,Store,"S1 (test, sealed)",False,0,0,0,
+checkoutservice_cpu,checkoutservice,cpu,development,True,1,23070,23070,frontendservice->PlaceOrder
+checkoutservice_delay,checkoutservice,delay,development,True,1,23070,23070,frontendservice->PlaceOrder
+checkoutservice_disk,checkoutservice,disk,development,True,1,23070,23070,frontendservice->PlaceOrder
+checkoutservice_loss,checkoutservice,loss,development,True,1,23070,23070,frontendservice->PlaceOrder
+checkoutservice_mem,checkoutservice,mem,development,True,1,23070,23070,frontendservice->PlaceOrder
+checkoutservice_socket,checkoutservice,socket,development,True,1,23070,23070,frontendservice->PlaceOrder
+currencyservice_cpu,currencyservice,cpu,development,True,3,1935483,1935396,checkoutservice->Convert; frontendservice->Convert; frontendservice->GetSupportedCurrencies
+currencyservice_delay,currencyservice,delay,development,True,3,1935483,1935396,checkoutservice->Convert; frontendservice->Convert; frontendservice->GetSupportedCurrencies
+currencyservice_disk,currencyservice,disk,development,True,3,1935483,1935396,checkoutservice->Convert; frontendservice->Convert; frontendservice->GetSupportedCurrencies
+currencyservice_loss,currencyservice,loss,development,True,3,1935483,1935396,checkoutservice->Convert; frontendservice->Convert; frontendservice->GetSupportedCurrencies
+currencyservice_mem,currencyservice,mem,development,True,3,1935483,1935396,checkoutservice->Convert; frontendservice->Convert; frontendservice->GetSupportedCurrencies
+currencyservice_socket,currencyservice,socket,development,True,3,1935483,1935396,checkoutservice->Convert; frontendservice->Convert; frontendservice->GetSupportedCurrencies
+emailservice_cpu,emailservice,cpu,"S1 (test, sealed)",True,1,22965,22960,checkoutservice->SendOrderConfirmation
+emailservice_delay,emailservice,delay,"S1 (test, sealed)",True,1,22965,22960,checkoutservice->SendOrderConfirmation
+emailservice_disk,emailservice,disk,"S1 (test, sealed)",True,1,22965,22960,checkoutservice->SendOrderConfirmation
+emailservice_loss,emailservice,loss,"S1 (test, sealed)",True,1,22965,22960,checkoutservice->SendOrderConfirmation
+emailservice_mem,emailservice,mem,"S1 (test, sealed)",True,1,22965,22960,checkoutservice->SendOrderConfirmation
+emailservice_socket,emailservice,socket,"S1 (test, sealed)",True,1,22965,22960,checkoutservice->SendOrderConfirmation
+productcatalogservice_cpu,productcatalogservice,cpu,"S1 (test, sealed)",True,4,3494212,3494107,checkoutservice->GetProduct; frontendservice->GetProduct; frontendservice->ListProducts; recommendationservice->ListProducts
+productcatalogservice_delay,productcatalogservice,delay,"S1 (test, sealed)",True,4,3494212,3494107,checkoutservice->GetProduct; frontendservice->GetProduct; frontendservice->ListProducts; recommendationservice->ListProducts
+productcatalogservice_disk,productcatalogservice,disk,"S1 (test, sealed)",True,4,3494212,3494107,checkoutservice->GetProduct; frontendservice->GetProduct; frontendservice->ListProducts; recommendationservice->ListProducts
+productcatalogservice_loss,productcatalogservice,loss,"S1 (test, sealed)",True,4,3494212,3494107,checkoutservice->GetProduct; frontendservice->GetProduct; frontendservice->ListProducts; recommendationservice->ListProducts
+productcatalogservice_mem,productcatalogservice,mem,"S1 (test, sealed)",True,4,3494212,3494107,checkoutservice->GetProduct; frontendservice->GetProduct; frontendservice->ListProducts; recommendationservice->ListProducts
+productcatalogservice_socket,productcatalogservice,socket,"S1 (test, sealed)",True,4,3494212,3494107,checkoutservice->GetProduct; frontendservice->GetProduct; frontendservice->ListProducts; recommendationservice->ListProducts
+recommendationservice_cpu,recommendationservice,cpu,"S1 (test, sealed)",True,1,457441,457428,frontendservice->ListRecommendations
+recommendationservice_delay,recommendationservice,delay,"S1 (test, sealed)",True,1,457441,457428,frontendservice->ListRecommendations
+recommendationservice_disk,recommendationservice,disk,"S1 (test, sealed)",True,1,457441,457428,frontendservice->ListRecommendations
+recommendationservice_loss,recommendationservice,loss,"S1 (test, sealed)",True,1,457441,457428,frontendservice->ListRecommendations
+recommendationservice_mem,recommendationservice,mem,"S1 (test, sealed)",True,1,457441,457428,frontendservice->ListRecommendations
+recommendationservice_socket,recommendationservice,socket,"S1 (test, sealed)",True,1,457441,457428,frontendservice->ListRecommendations
