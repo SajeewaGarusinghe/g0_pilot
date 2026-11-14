@@ -1,0 +1,13 @@
+NAME                                     READY   STATUS    RESTARTS   AGE     IP           NODE                  NOMINATED NODE   READINESS GATES
+adservice-94fc4b5fc-mqhsk                1/1     Running   0          4m37s   10.42.1.13   k3d-trackb-agent-1    <none>           <none>
+cartservice-74f6c5555c-5vbtw             1/1     Running   0          4m37s   10.42.0.13   k3d-trackb-agent-0    <none>           <none>
+checkoutservice-57586bd6c6-7mtlm         1/1     Running   0          4m37s   10.42.1.14   k3d-trackb-agent-1    <none>           <none>
+currencyservice-6546f85bb9-vg4d8         1/1     Running   0          4m36s   10.42.0.14   k3d-trackb-agent-0    <none>           <none>
+emailservice-57c8595ffd-2hz8p            1/1     Running   0          4m36s   10.42.1.15   k3d-trackb-agent-1    <none>           <none>
+frontend-86cbc6b7d4-p22qz                1/1     Running   0          4m35s   10.42.0.16   k3d-trackb-agent-0    <none>           <none>
+loadgenerator-559845bb99-sfqrr           1/1     Running   0          4m35s   10.42.0.17   k3d-trackb-agent-0    <none>           <none>
+paymentservice-6db86bb7f6-2frzz          1/1     Running   0          4m36s   10.42.2.12   k3d-trackb-server-0   <none>           <none>
+productcatalogservice-5d465ff974-9qfqp   1/1     Running   0          4m36s   10.42.1.16   k3d-trackb-agent-1    <none>           <none>
+recommendationservice-6fd68b5bd7-cln2q   1/1     Running   0          4m36s   10.42.0.15   k3d-trackb-agent-0    <none>           <none>
+redis-cart-7444779cbf-nb7pr              1/1     Running   0          8m5s    10.42.2.10   k3d-trackb-server-0   <none>           <none>
+shippingservice-645d794df4-mgvxj         1/1     Running   0          4m36s   10.42.2.13   k3d-trackb-server-0   <none>           <none>

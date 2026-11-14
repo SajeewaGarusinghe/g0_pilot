@@ -1,0 +1,5 @@
+case,rpc.status_code,converter_gives,a_fix_would_give,recoverable
+current_ok,OK,0,0,True
+current_unavailable,UNAVAILABLE,2,14,True
+current_deadline_exceeded,DEADLINE_EXCEEDED,2,4,True
+current_not_found,NOT_FOUND,0,5,True

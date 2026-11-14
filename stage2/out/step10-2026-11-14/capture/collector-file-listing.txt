@@ -1,0 +1,5 @@
+total 32128
+drwxrwxrwx    2 root     root            31 Nov 14 08:56 .
+drwxr-xr-x    1 root     root            63 Nov 14 08:56 ..
+-rw-r--r--    1 10001    root      16952555 Nov 14 09:03 otlp-traces.jsonl
+84 /data/otlp-traces.jsonl

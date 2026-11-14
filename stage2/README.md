@@ -1,4 +1,4 @@
-# G0 stage 2 — steps 1–11a on the data
+# G0 stage 2 — steps 1–11a on the data, and the Track B spike
 
 Build-guide `P0` steps 1–3 and 7 for *Verifying Telemetry Before Trusting It*. Steps 1–3 read the
 same `traces.csv` and run as one pass per case; step 7 is a second pass that applies the candidate
@@ -18,6 +18,8 @@ aggregates.
 | `route_coverage.py` | 11a (A) | collates the published aggregates to one row per (caller, callee, method); opens no case file |
 | `signal_writers.py` | 11a (B) | proves which `metrics.csv` series each `simple_metrics.csv` column **is**, over all 36 dev cases |
 | `re3ob_index.py` | 11a (C) | reads RE3-OB's **case index only** — the zip central directory over HTTP range requests |
+| `k18_otlp_status.py` | 10 (K18) | builds OTLP/JSON for the legacy and current gRPC conventions and measures what `rcaeval-convert` makes of each; needs no cluster |
+| `trackb/` | 10 | the Track B spike: install, k3d cluster, a current collector, Online Boutique v0.9.0 with tracing on, capture, end-to-end check. See `trackb/README.md` |
 
 **This is a prototype.** P3 rewrites the matcher with unit tests (build guide P0, "Do not
 polish the P0 scripts").
